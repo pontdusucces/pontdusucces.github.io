@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Pont du Succès | Tétouan</title>
+    <meta name="description" content="Association Pont du Succès à Tétouan : éducation, alphabétisation, jeunesse, femmes, formation, insertion professionnelle et développement durable.">
+    <meta name="keywords" content="Association Pont du Succès, Tétouan, éducation, développement durable, alphabétisation, jeunesse, femmes, insertion professionnelle">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo Association Pont du Succès"> 
+        
+            <h1>
+                <span class="association-name"
+                      data-fr="Association Pont du Succès"
+                      data-ar="جمعية جسر النجاح">
+                    Association Pont du Succès
+                </span>
+            
+                <span class="association-subtitle"
+                      data-fr="Pour l'Éducation et le Développement Durable"
+                      data-ar="للتربية والتنمية المستدامة">
+                    Pour l'Éducation et le Développement Durable
+                </span>
+            </h1>
+        
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a
+            href="#accueil" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+            <a href="#association" data-fr="Notre association" data-ar="جمعيتنا">
+                Notre association
+            </a>
+            
+            <a href="#activites" data-fr="Nos activités" data-ar="أنشطتنا">
+                Nos activités
+            </a>
+            
+            <a href="#projets" data-fr="Nos projets" data-ar="مشاريعنا">
+                Nos projets
+            </a>
+            
+            <a href="#valeurs" data-fr="Nos valeurs" data-ar="قيمنا">
+                Nos valeurs
+            </a>
+            
+            <a href="#contact" data-fr="Contact" data-ar="اتصل بنا">
+                Contact
+            </a>
+        
+            <div class="language-switcher">
+                <button onclick="setLanguage('fr')">FR</button>
+                <button onclick="setLanguage('ar')">العربية</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    
+        <section id="accueil">
+
+            <div class="hero-slides">
+        
+                <div class="hero-slide active"
+                     style="background-image: url('images/photo\ 1.jpeg');"></div>
+        
+                <div class="hero-slide"
+                     style="background-image: url('images/photo\ 2.jpeg');"></div>
+        
+                <div class="hero-slide"
+                     style="background-image: url('images/photo\ 3.jpeg');"></div>
+        
+                <!-- سهم اليسار -->
+                <button class="slider-arrow slider-prev"
+                        type="button"
+                        aria-label="Image précédente">
+                    ❮
+                </button>
+        
+                <!-- سهم اليمين -->
+                <button class="slider-arrow slider-next"
+                        type="button"
+                        aria-label="Image suivante">
+                    ❯
+                </button>
+        
+                <!-- نقاط السلايدر -->
+                <div class="slider-dots">
+        
+                    <button class="slider-dot active"
+                            type="button"
+                            aria-label="Image 1"></button>
+        
+                    <button class="slider-dot"
+                            type="button"
+                            aria-label="Image 2"></button>
+        
+                    <button class="slider-dot"
+                            type="button"
+                            aria-label="Image 3"></button>
+        
+                </div>
+        
+            </div>
+        
+            <!-- محتوى الواجهة -->
+            <div class="hero-content">
+        
+                <h2
+                    data-fr="Construisons ensemble un avenir meilleur"
+                    data-ar="نبني معًا مستقبلًا أفضل">
+                    Construisons ensemble un avenir meilleur
+                </h2>
+        
+                <p
+                    data-fr="Éducation, inclusion, solidarité et développement durable au service de notre communauté."
+                    data-ar="التعليم، الإدماج، التضامن والتنمية المستدامة في خدمة مجتمعنا.">
+                    Éducation, inclusion, solidarité et développement durable
+                    au service de notre communauté.
+                </p>
+        
+                <div class="hero-buttons">
+        
+                    <a href="#association"
+                       class="btn-primary"
+                       data-fr="Découvrir l'association"
+                       data-ar="اكتشف جمعيتنا">
+                        Découvrir l'association
+                    </a>
+        
+                    <a href="#activites"
+                       class="btn-secondary"
+                       data-fr="Nos activités"
+                       data-ar="أنشطتنا">
+                        Nos activités
+                    </a>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section id="association">
+            <h2
+                data-fr="Notre association"
+                data-ar="جمعيتنا">
+                Notre association
+            </h2>
+        
+            <p class="association-intro"
+               data-fr="L’Association Pont du Succès pour l’Éducation et le Développement Durable, créée à Tétouan, est une association régionale à caractère social, éducatif et culturel."
+               data-ar="جمعية جسر النجاح للتربية والتنمية المستدامة، تأسست بمدينة تطوان، وهي جمعية جهوية ذات طابع اجتماعي وتربوي وثقافي.">
+                L’Association Pont du Succès pour l’Éducation et le Développement Durable,
+                créée à Tétouan, est une association régionale à caractère social,
+                éducatif et culturel.
+            </p>
+        
+            <p class="association-intro"
+               data-fr="Elle œuvre à travers des programmes, des projets et des actions de sensibilisation en faveur des enfants, des jeunes, des femmes et des publics en situation de vulnérabilité."
+               data-ar="تعمل الجمعية من خلال برامج ومشاريع وأنشطة تحسيسية لفائدة الأطفال والشباب والنساء والفئات في وضعية هشاشة.">
+                Elle œuvre à travers des programmes, des projets et des actions de
+                sensibilisation en faveur des enfants, des jeunes, des femmes et des
+                publics en situation de vulnérabilité.
+            </p>
+        
+            <div class="association-content">
+        
+                <div class="association-card">
+        
+                    <h3
+                        data-fr="Notre mission"
+                        data-ar="مهمتنا">
+                        Notre mission
+                    </h3>
+        
+                    <p
+                        data-fr="Notre mission est de contribuer au développement humain et social en favorisant l’accès à l’éducation, à la formation et à l’apprentissage tout au long de la vie."
+                        data-ar="تتمثل مهمتنا في المساهمة في التنمية البشرية والاجتماعية من خلال تعزيز الولوج إلى التعليم والتكوين والتعلم مدى الحياة.">
+                        Notre mission est de contribuer au développement humain et social
+                        en favorisant l’accès à l’éducation, à la formation et à
+                        l’apprentissage tout au long de la vie.
+                    </p>
+        
+                    <ul>
+        
+                        <li
+                            data-fr="Lutter contre l’analphabétisme et développer des programmes d’alphabétisation."
+                            data-ar="المساهمة في محاربة الأمية وتطوير برامج محو الأمية وما بعد محو الأمية.">
+                            Lutter contre l’analphabétisme et développer des programmes d’alphabétisation.
+                        </li>
+        
+                        <li
+                            data-fr="Accompagner les enfants et les jeunes menacés de décrochage scolaire."
+                            data-ar="مواكبة الأطفال والشباب المهددين بالانقطاع عن الدراسة.">
+                            Accompagner les enfants et les jeunes menacés de décrochage scolaire.
+                        </li>
+        
+                        <li
+                            data-fr="Favoriser la réintégration scolaire et l’insertion professionnelle."
+                            data-ar="تعزيز إعادة الإدماج المدرسي والإدماج المهني.">
+                            Favoriser la réintégration scolaire et l’insertion professionnelle.
+                        </li>
+        
+                        <li
+                            data-fr="Promouvoir l’éducation préscolaire et les approches pédagogiques modernes."
+                            data-ar="النهوض بالتعليم الأولي والمناهج التربوية الحديثة.">
+                            Promouvoir l’éducation préscolaire et les approches pédagogiques modernes.
+                        </li>
+        
+                        <li
+                            data-fr="Sensibiliser aux règles de sécurité routière."
+                            data-ar="تحسيس الأطفال ومستعملي الطريق بقواعد السلامة الطرقية.">
+                            Sensibiliser aux règles de sécurité routière.
+                        </li>
+        
+                        <li
+                            data-fr="Promouvoir les droits des femmes et leur participation à la vie locale."
+                            data-ar="تعزيز حقوق المرأة ومشاركتها في تدبير الشأن المحلي.">
+                            Promouvoir les droits des femmes et leur participation à la vie locale.
+                        </li>
+        
+                        <li
+                            data-fr="Développer des activités culturelles, sociales et éducatives."
+                            data-ar="تنمية الأنشطة الثقافية والاجتماعية والتربوية.">
+                            Développer des activités culturelles, sociales et éducatives.
+                        </li>
+        
+                        <li
+                            data-fr="Lutter contre le travail des enfants."
+                            data-ar="المساهمة في محاربة ظاهرة تشغيل الأطفال.">
+                            Lutter contre le travail des enfants.
+                        </li>
+        
+                    </ul>
+        
+                </div>
+        
+                <div class="association-card">
+        
+                    <h3
+                        data-fr="Nos domaines d’intervention"
+                        data-ar="مجالات تدخلنا">
+                        Nos domaines d’intervention
+                    </h3>
+        
+                    <div class="domaines">
+        
+                        <div data-fr="🎓 Éducation" data-ar="🎓 التعليم">
+                            🎓 Éducation
+                        </div>
+        
+                        <div data-fr="👧 Enfance & Jeunesse" data-ar="👧 الطفولة والشباب">
+                            👧 Enfance & Jeunesse
+                        </div>
+        
+                        <div data-fr="📚 Alphabétisation" data-ar="📚 محو الأمية">
+                            📚 Alphabétisation
+                        </div>
+        
+                        <div data-fr="🚦 Sécurité routière" data-ar="🚦 السلامة الطرقية">
+                            🚦 Sécurité routière
+                        </div>
+        
+                        <div data-fr="👩 Femmes & Égalité" data-ar="👩 المرأة والمساواة">
+                            👩 Femmes & Égalité
+                        </div>
+        
+                        <div data-fr="💼 Formation & Insertion" data-ar="💼 التكوين والإدماج">
+                            💼 Formation & Insertion
+                        </div>
+        
+                        <div data-fr="🎨 Culture & Société" data-ar="🎨 الثقافة والمجتمع">
+                            🎨 Culture & Société
+                        </div>
+        
+                        <div data-fr="🌱 Développement durable" data-ar="🌱 التنمية المستدامة">
+                            🌱 Développement durable
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section id="activites">
+            <h2
+                data-fr="Nos activités"
+                data-ar="أنشطتنا">
+                Nos activités
+            </h2>
+        
+            <p class="activites-intro"
+               data-fr="L’association met en œuvre des activités éducatives, sociales, culturelles et de sensibilisation au service des enfants, des jeunes, des femmes et des publics en situation de vulnérabilité."
+               data-ar="تنفذ الجمعية أنشطة تربوية واجتماعية وثقافية وتحسيسية لفائدة الأطفال والشباب والنساء والفئات في وضعية هشاشة.">
+                L’association met en œuvre des activités éducatives, sociales,
+                culturelles et de sensibilisation au service des enfants,
+                des jeunes, des femmes et des publics en situation de vulnérabilité.
+            </p>
+        
+            <div class="activites-grid">
+        
+                <div class="activite-card">
+        
+                    <img src="images/education 1.jpeg"
+                         alt="Éducation"
+                         class="activite-image">
+        
+                    <h3
+                        data-fr="Éducation"
+                        data-ar="التعليم">
+                        Éducation
+                    </h3>
+        
+                    <p
+                        data-fr="Accompagnement éducatif, éducation non formelle, éducation préscolaire et apprentissage tout au long de la vie."
+                        data-ar="المواكبة التربوية، والتربية غير النظامية، والتعليم الأولي، والتعلم مدى الحياة.">
+                        Accompagnement éducatif, éducation non formelle,
+                        éducation préscolaire et apprentissage tout au long de la vie.
+                    </p>
+        
+                </div>
+        
+                <div class="activite-card">
+        
+                    <img src="images/securite-routiere.jpeg"
+     alt="Sécurité routière"
+     class="activite-image">
+        
+                    <h3
+                        data-fr="Sécurité routière"
+                        data-ar="السلامة الطرقية">
+                        Sécurité routière
+                    </h3>
+        
+                    <p
+                        data-fr="Sensibilisation des enfants et des usagers de la route aux règles de sécurité et à l’utilisation des passages piétons."
+                        data-ar="تحسيس الأطفال ومستعملي الطريق بقواعد السلامة الطرقية وأهمية استعمال ممرات الراجلين.">
+                        Sensibilisation des enfants et des usagers de la route
+                        aux règles de sécurité et à l’utilisation des passages piétons.
+                    </p>
+        
+                </div>
+        
+                <div class="activite-card">
+        
+                    <img src="images/alphabetisation.jpeg"
+     alt="Alphabétisation"
+     class="activite-image">
+        
+                    <h3
+                        data-fr="Alphabétisation"
+                        data-ar="محو الأمية">
+                        Alphabétisation
+                    </h3>
+        
+                    <p
+                        data-fr="Mise en place de programmes d’alphabétisation, de post-alphabétisation et d’éducation parentale."
+                        data-ar="تنفيذ برامج محو الأمية وما بعد محو الأمية والتربية الوالدية.">
+                        Mise en place de programmes d’alphabétisation,
+                        de post-alphabétisation et d’éducation parentale.
+                    </p>
+        
+                </div>
+        
+                <div class="activite-card">
+        
+                    <img src="images/enfance-jeunesse.jpeg"
+     alt="Enfance & Jeunesse"
+     class="activite-image">
+        
+                    <h3
+                        data-fr="Enfance & Jeunesse"
+                        data-ar="الطفولة والشباب">
+                        Enfance & Jeunesse
+                    </h3>
+        
+                    <p
+                        data-fr="Accompagnement des jeunes exposés au décrochage scolaire, réintégration éducative et lutte contre le travail des enfants."
+                        data-ar="مواكبة الشباب المهددين بالانقطاع عن الدراسة، وإعادة الإدماج التربوي، ومحاربة تشغيل الأطفال.">
+                        Accompagnement des jeunes exposés au décrochage scolaire,
+                        réintégration éducative et lutte contre le travail des enfants.
+                    </p>
+        
+                </div>
+        
+                <div class="activite-card">
+        
+                    <div class="activite-icon">👩</div>
+        
+                    <h3
+                        data-fr="Femmes & Égalité"
+                        data-ar="المرأة والمساواة">
+                        Femmes & Égalité
+                    </h3>
+        
+                    <p
+                        data-fr="Organisation de rencontres et de formations sur les droits des femmes et leur participation à la vie locale."
+                        data-ar="تنظيم لقاءات ودورات تكوينية حول حقوق المرأة ومشاركتها في تدبير الشأن المحلي.">
+                        Organisation de rencontres et de formations sur les droits
+                        des femmes et leur participation à la vie locale.
+                    </p>
+        
+                </div>
+        
+                <div class="activite-card">
+                    <div class="activite-icon">💼</div>
+                
+                    <h3 data-fr="Formation & Insertion"
+                        data-ar="التكوين والإدماج">
+                        Formation & Insertion
+                    </h3>
+                
+                    <p data-fr="Développement de projets de formation, d’insertion professionnelle et d’accompagnement vers l’emploi."
+                       data-ar="تطوير مشاريع التكوين والإدماج المهني ومواكبة المستفيدين نحو الولوج إلى سوق الشغل.">
+                        Développement de projets de formation, d’insertion professionnelle et d’accompagnement vers l’emploi.
+                    </p>
+                
+            
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section id="projets">
+            <h2
+                data-fr="Nos projets"
+                data-ar="مشاريعنا">
+                Nos projets
+            </h2>
+        
+            <p class="projets-intro"
+               data-fr="L’Association Pont du Succès développe et accompagne des projets visant à répondre aux besoins éducatifs, sociaux et professionnels des enfants, des jeunes, des femmes et des publics vulnérables."
+               data-ar="تعمل جمعية جسر النجاح على تطوير ومواكبة مشاريع تستجيب للاحتياجات التربوية والاجتماعية والمهنية للأطفال والشباب والنساء والفئات الهشة.">
+                L’Association Pont du Succès développe et accompagne des projets
+                visant à répondre aux besoins éducatifs, sociaux et professionnels
+                des enfants, des jeunes, des femmes et des publics vulnérables.
+            </p>
+        
+            <div class="projets-grid">
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">01</span>
+        
+                    <h3
+                        data-fr="Éducation préscolaire"
+                        data-ar="التعليم الأولي">
+                        Éducation préscolaire
+                    </h3>
+        
+                    <p
+                        data-fr="Développer et contribuer à la mise en œuvre de programmes d’éducation préscolaire adaptés aux besoins des enfants."
+                        data-ar="تطوير والمساهمة في تنفيذ برامج للتعليم الأولي ملائمة لاحتياجات الأطفال.">
+                        Développer et contribuer à la mise en œuvre de programmes
+                        d’éducation préscolaire adaptés aux besoins des enfants.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">02</span>
+        
+                    <h3
+                        data-fr="Écoles de la Deuxième Chance"
+                        data-ar="مدارس الفرصة الثانية">
+                        Écoles de la Deuxième Chance
+                    </h3>
+        
+                    <p
+                        data-fr="Participer aux projets des Écoles de la Deuxième Chance – Nouvelle Génération et accompagner les jeunes dans leur parcours."
+                        data-ar="المساهمة في مشاريع مدارس الفرصة الثانية – الجيل الجديد ومواكبة الشباب في مسارهم التربوي والمهني.">
+                        Participer aux projets des Écoles de la Deuxième Chance –
+                        Nouvelle Génération et accompagner les jeunes dans leur parcours.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">03</span>
+        
+                    <h3
+                        data-fr="Alphabétisation"
+                        data-ar="محو الأمية">
+                        Alphabétisation
+                    </h3>
+        
+                    <p
+                        data-fr="Concevoir et mettre en œuvre des projets d’alphabétisation, de post-alphabétisation et d’apprentissage tout au long de la vie."
+                        data-ar="إعداد وتنفيذ مشاريع محو الأمية وما بعد محو الأمية والتعلم مدى الحياة.">
+                        Concevoir et mettre en œuvre des projets d’alphabétisation,
+                        de post-alphabétisation et d’apprentissage tout au long de la vie.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">04</span>
+        
+                    <h3
+                        data-fr="Accompagnement éducatif"
+                        data-ar="المواكبة التربوية">
+                        Accompagnement éducatif
+                    </h3>
+        
+                    <p
+                        data-fr="Accompagner les élèves exposés au décrochage scolaire à travers des programmes éducatifs et culturels."
+                        data-ar="مواكبة التلاميذ المهددين بالانقطاع عن الدراسة من خلال برامج تربوية وثقافية.">
+                        Accompagner les élèves exposés au décrochage scolaire
+                        à travers des programmes éducatifs et culturels.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">05</span>
+        
+                    <h3
+                        data-fr="Formation & Insertion"
+                        data-ar="التكوين والإدماج">
+                        Formation & Insertion
+                    </h3>
+        
+                    <p
+                        data-fr="Développer des projets favorisant la formation, l’insertion professionnelle et l’accès à l’emploi."
+                        data-ar="تطوير مشاريع تساهم في التكوين والإدماج المهني والولوج إلى سوق الشغل.">
+                        Développer des projets favorisant la formation,
+                        l’insertion professionnelle et l’accès à l’emploi.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="projet-card">
+        
+                    <span class="projet-number">06</span>
+        
+                    <h3
+                        data-fr="Protection de l’enfance"
+                        data-ar="حماية الطفولة">
+                        Protection de l’enfance
+                    </h3>
+        
+                    <p
+                        data-fr="Contribuer à la lutte contre le travail des enfants à travers des actions de sensibilisation et des programmes adaptés."
+                        data-ar="المساهمة في محاربة تشغيل الأطفال من خلال أنشطة تحسيسية وبرامج ملائمة.">
+                        Contribuer à la lutte contre le travail des enfants
+                        à travers des actions de sensibilisation et des programmes adaptés.
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+        <section id="valeurs">
+            <h2
+                data-fr="Nos valeurs"
+                data-ar="قيمنا">
+                Nos valeurs
+            </h2>
+        
+            <p class="valeurs-intro"
+               data-fr="Notre association fonde son action sur des valeurs humaines, éducatives et sociales qui contribuent à un développement durable et inclusif."
+               data-ar="تقوم جمعيتنا على قيم إنسانية وتربوية واجتماعية تساهم في تحقيق تنمية مستدامة وشاملة.">
+                Notre association fonde son action sur des valeurs humaines,
+                éducatives et sociales qui contribuent à un développement durable
+                et inclusif.
+            </p>
+        
+            <div class="valeurs-grid">
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">🎓</div>
+        
+                    <h3
+                        data-fr="Éducation"
+                        data-ar="التعليم">
+                        Éducation
+                    </h3>
+        
+                    <p
+                        data-fr="Favoriser l’accès à l’éducation et à l’apprentissage."
+                        data-ar="تعزيز الولوج إلى التعليم والتعلم.">
+                        Favoriser l’accès à l’éducation et à l’apprentissage.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">🤝</div>
+        
+                    <h3
+                        data-fr="Solidarité"
+                        data-ar="التضامن">
+                        Solidarité
+                    </h3>
+        
+                    <p
+                        data-fr="Encourager l’entraide et la solidarité au sein de la communauté."
+                        data-ar="تشجيع التعاون والتضامن داخل المجتمع.">
+                        Encourager l’entraide et la solidarité au sein de la communauté.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">🌍</div>
+        
+                    <h3
+                        data-fr="Inclusion"
+                        data-ar="الإدماج">
+                        Inclusion
+                    </h3>
+        
+                    <p
+                        data-fr="Promouvoir l’inclusion et l’égalité des chances pour tous."
+                        data-ar="تعزيز الإدماج وتكافؤ الفرص للجميع.">
+                        Promouvoir l’inclusion et l’égalité des chances pour tous.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">👩</div>
+        
+                    <h3
+                        data-fr="Égalité"
+                        data-ar="المساواة">
+                        Égalité
+                    </h3>
+        
+                    <p
+                        data-fr="Valoriser les droits et la participation de chacun."
+                        data-ar="تعزيز حقوق الجميع وتشجيع مشاركة كل فرد.">
+                        Valoriser les droits et la participation de chacun.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">🌱</div>
+        
+                    <h3
+                        data-fr="Développement durable"
+                        data-ar="التنمية المستدامة">
+                        Développement durable
+                    </h3>
+        
+                    <p
+                        data-fr="Contribuer à un développement respectueux de l’environnement."
+                        data-ar="المساهمة في تحقيق تنمية تحترم البيئة وتحافظ عليها.">
+                        Contribuer à un développement respectueux de l’environnement.
+                    </p>
+        
+                </div>
+        
+        
+                <div class="valeur-card">
+        
+                    <div class="valeur-icon">💙</div>
+        
+                    <h3
+                        data-fr="Engagement"
+                        data-ar="الالتزام">
+                        Engagement
+                    </h3>
+        
+                    <p
+                        data-fr="Agir concrètement au service de la communauté."
+                        data-ar="العمل بشكل ملموس لخدمة المجتمع.">
+                        Agir concrètement au service de la communauté.
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+        <section id="contact">
+            <h2
+                data-fr="Contactez-nous"
+                data-ar="اتصل بنا">
+                Contactez-nous
+            </h2>
+        
+            <p class="contact-intro"
+               data-fr="Pour toute demande d’information, de partenariat ou de collaboration, vous pouvez nous contacter."
+               data-ar="لأي استفسار أو طلب شراكة أو تعاون، يمكنكم التواصل معنا.">
+                Pour toute demande d’information, de partenariat ou de collaboration,
+                vous pouvez nous contacter.
+            </p>
+        
+        
+            <div class="contact-content">
+        
+        
+                <div class="contact-card">
+        
+                    <h3
+                        data-fr="Association Pont du Succès"
+                        data-ar="جمعية جسر النجاح">
+                        Association Pont du Succès
+                    </h3>
+        
+        
+                    <p>
+        
+                        <strong
+                            data-fr="📍 Adresse :"
+                            data-ar="📍 العنوان :">
+                            📍 Adresse :
+                        </strong>
+        
+                        <br>
+        
+                        <a href="https://www.google.com/maps/search/?api=1&query=Avenue+Riyad+Rue+Al-Harrab+Tetouan+Maroc"
+                           target="_blank">
+        
+                            Siège : Avenue Riyad, Rue Al-Harrab, Tétouan, Maroc
+        
+                        </a>
+        
+                    </p>
+        
+        
+                    <p>
+        
+                        <strong
+                            data-fr="✉️ Email :"
+                            data-ar="✉️ البريد الإلكتروني :">
+                            ✉️ Email :
+                        </strong>
+        
+                        <br>
+        
+                        <a href="https://mail.google.com/mail/?view=cm&to=info.pontdusucces@gmail.com"
+                           target="_blank">
+        
+                            info.pontdusucces@gmail.com
+        
+                        </a>
+        
+                    </p>
+        
+        
+                    <p>
+                        <strong data-fr="📞 Téléphone :" data-ar="📞 الهاتف :">
+                            📞 Téléphone :
+                        </strong>
+                        <br>
+                        <a href="tel:+212643782024">
+                            📞 +212 643 78 20 24
+                        </a>
+                    </p>
+        
+                    </p>
+        
+                </div>
+        
+        
+        
+                <div class="contact-card">
+        
+                    <h3
+                        data-fr="Nous contacter"
+                        data-ar="تواصل معنا">
+                        Nous contacter
+                    </h3>
+        
+                    <p
+                        data-fr="Vous souhaitez collaborer avec notre association, proposer un projet ou établir un partenariat ?"
+                        data-ar="هل ترغبون في التعاون مع جمعيتنا، أو اقتراح مشروع، أو إقامة شراكة؟">
+                        Vous souhaitez collaborer avec notre association,
+                        proposer un projet ou établir un partenariat ?
+                    </p>
+        
+                    <a href="https://mail.google.com/mail/?view=cm&to=info.pontdusucces@gmail.com"
+   target="_blank"
+   class="contact-button"
+   data-fr="Envoyer un email"
+   data-ar="إرسال بريد إلكتروني">
+    Envoyer un email
+</a>
+<a href="https://wa.me/212643782024"
+   target="_blank"
+   class="contact-whatsapp"
+   data-fr="WhatsApp"
+   data-ar="واتساب">
+    WhatsApp
+</a>
+        
+                </div>
+        
+        
+            </div>
+        
+        </section>
+    </main>
+    <a href="#accueil" class="back-to-top">↑</a>
+    <a href="https://wa.me/212643782024"
+    class="whatsapp-button"
+    target="_blank"
+    aria-label="WhatsApp">
+    <img src="images/whatsapp 2.png" alt="WhatsApp">
+ </a>
+ <a href="tel:+212643782024"
+   class="phone-button"
+   aria-label="Téléphone">
+    📞
+</a>
+<footer>
+    <div class="footer-content">
+        <h3
+            data-fr="Association Pont du Succès"
+            data-ar="جمعية جسر النجاح">
+            Association Pont du Succès
+        </h3>
+        <p
+            data-fr="Pour l'Éducation et le Développement Durable"
+            data-ar="للتربية والتنمية المستدامة">
+            Pour l'Éducation et le Développement Durable
+        </p>
+        <p class="footer-location"
+           data-fr="Tétouan, Maroc"
+           data-ar="تطوان، المغرب">
+            Tétouan, Maroc
+        </p>
+        <div class="footer-line"></div>
+        <p class="copyright"
+           data-fr="© 2026 Association Pont du Succès — Tous droits réservés."
+           data-ar="© 2026 جمعية جسر النجاح — جميع الحقوق محفوظة.">
+            © 2026 Association Pont du Succès — Tous droits réservés.
+        </p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+  
+</body>
+
+</html>

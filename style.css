@@ -1,0 +1,2815 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eaf4ff 0%, #d6eaff 45%, #b9d8f5 100%);
+    color: #17324d;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    background-color: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(35, 75, 99, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-container img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.logo-container h1 {
+    display: flex;
+    flex-direction: column;
+    color: #0d4775;
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.logo-container h1 .association-name {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #234B63;
+}
+
+.logo-container h1 .association-subtitle {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1769aa;
+    margin-top: 4px;
+}
+
+
+/* ===== MENU ===== */
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #234B63;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4fa301;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #2F6F8F;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ===== LANGUAGE SWITCHER ===== */
+
+.language-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.language-switcher button {
+    border: 1px solid #6FA8BF;
+    background-color: white;
+    color: #234B63;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #2F6F8F;
+    color: white;
+}
+
+
+/* ===== ACCUEIL ===== */
+
+#accueil {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("images/photo 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== HERO SLIDER ===== */
+
+#accueil {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* الصور */
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: #123B5D;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* الطبقة الداكنة */
+.hero-slides::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+}
+
+/* المحتوى */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+#accueil h2,
+#accueil p,
+#accueil .hero-buttons {
+    position: relative;
+    z-index: 1;
+}
+
+#accueil h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#accueil p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* ===== HERO BUTTONS ===== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #2F6F8F;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #234B63;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #234B63;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+}
+
+
+/* ===== GENERAL BUTTON ===== */
+
+button {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2F6F8F;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #234B63;
+}
+
+
+/* ===== SECTIONS ===== */
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #234B63;
+    margin-bottom: 25px;
+}
+
+
+/* ===== ASSOCIATION ===== */
+
+#association {
+    background-color: #f3f8fc;
+}
+
+.association-intro {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    color: #334E5C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.association-content {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.association-card {
+    background-color: white;
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(35, 75, 99, 0.10);
+    text-align: left;
+}
+
+.association-card h3 {
+    color: #2F6F8F;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.association-card p {
+    color: #334E5C;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.association-card ul {
+    padding-left: 20px;
+    color: #334E5C;
+}
+
+.association-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.domaines {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.domaines div {
+    background-color: #F5F9FB;
+    border-left: 4px solid #6FA8BF;
+    padding: 15px;
+    border-radius: 6px;
+    color: #234B63;
+    font-weight: 600;
+}
+
+
+/* ===== ACTIVITES ===== */
+
+.activites-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #334E5C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.activites-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.activite-card {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(35, 75, 99, 0.10);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(35, 75, 99, 0.15);
+}
+
+.activite-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.activite-card h3 {
+    color: #2F6F8F;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.activite-card p {
+    color: #334E5C;
+    line-height: 1.7;
+}
+
+.activite-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+
+/* ===== PROJETS ===== */
+
+#projets {
+    background-color: white;
+}
+
+.projets-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #334E5C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.projets-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projet-card {
+    position: relative;
+    background-color: #F5F9FB;
+    padding: 35px 25px 30px;
+    border-radius: 12px;
+    border-top: 4px solid #2F6F8F;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(35, 75, 99, 0.12);
+}
+
+.projet-number {
+    display: block;
+    color: #6FA8BF;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.projet-card h3 {
+    color: #234B63;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.projet-card p {
+    color: #334E5C;
+    line-height: 1.7;
+}
+
+
+/* ===== VALEURS ===== */
+
+#valeurs {
+    background-color: white;
+}
+
+.valeurs-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #334E5C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.valeurs-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.valeur-card {
+    background-color: #F5F9FB;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    border-bottom: 3px solid #6FA8BF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valeur-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(35, 75, 99, 0.12);
+}
+
+.valeur-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.valeur-card h3 {
+    color: #2F6F8F;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.valeur-card p {
+    color: #334E5C;
+    line-height: 1.7;
+}
+
+
+/* ===== CONTACT ===== */
+
+#contact {
+    background-color: #F5F9FB;
+}
+
+.contact-intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    color: #334E5C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.contact-content {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(35, 75, 99, 0.10);
+    text-align: left;
+}
+
+.contact-card h3 {
+    color: #2F6F8F;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    color: #334E5C;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.contact-card a {
+    color: #2F6F8F;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #234B63;
+    text-decoration: underline;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #2F6F8F;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #234B63;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(35, 75, 99, 0.20);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #234B63;
+    color: white;
+    padding: 40px 20px 25px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-location {
+    color: #DCECF3;
+    font-size: 15px;
+}
+
+.footer-line {
+    width: 80px;
+    height: 2px;
+    background-color: #6FA8BF;
+    margin: 25px auto;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #DCECF3;
+}
+
+
+/* ===== BACK TO TOP ===== */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F6F8F;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(35, 75, 99, 0.25);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.back-to-top:hover {
+    background-color: #234B63;
+    transform: translateY(-3px);
+}
+
+
+/* ===== TABLET ===== */
+
+@media (max-width: 900px) {
+
+    .activites-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projets-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 5%;
+        gap: 12px;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-container h1 {
+        font-size: 20px;
+    }
+
+    .logo-container h1 .association-name {
+        font-size: 20px;
+    }
+
+    .logo-container h1 .association-subtitle {
+        font-size: 11px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    #accueil {
+        min-height: 520px;
+        padding: 30px 20px;
+    }
+
+    #accueil h2 {
+        font-size: 30px;
+    }
+
+    #accueil p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .association-content {
+        flex-direction: column;
+    }
+
+    .domaines {
+        grid-template-columns: 1fr;
+    }
+
+    .association-card {
+        padding: 22px;
+    }
+
+    .activites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .activite-card,
+    .projet-card {
+        padding: 22px;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 21px;
+    }
+}
+
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .activites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== ARABIC ===== */
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] .logo-container {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] nav {
+    direction: rtl;
+}
+
+html[dir="rtl"] .association-card,
+html[dir="rtl"] .projet-card,
+html[dir="rtl"] .contact-card {
+    text-align: right;
+}
+
+html[dir="rtl"] .association-card ul {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+html[dir="rtl"] .domaines div {
+    border-left: none;
+    border-right: 4px solid #6FA8BF;
+}
+/* ===== ANIMATION ACCUEIL ===== */
+
+#accueil h2,
+#accueil p,
+#accueil .hero-buttons {
+    animation: fadeUp 1s ease forwards;
+}
+
+#accueil p {
+    animation-delay: 0.2s;
+}
+
+#accueil .hero-buttons {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== CARD ANIMATION ===== */
+
+.activite-card,
+.projet-card,
+.valeur-card,
+.association-card,
+.contact-card {
+    animation: cardAppear 0.8s ease forwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== MOBILE MENU BUTTON ===== */
+
+.menu-toggle {
+    display: none;
+    background-color: #234B63;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(35, 75, 99, 0.20);
+    transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #2F6F8F;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
+/* ===== MOBILE MENU OPEN ===== */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
+    nav a,
+    .language-switcher {
+        display: none;
+    }
+
+    nav.menu-open a,
+    nav.menu-open .language-switcher {
+        display: flex;
+    }
+
+    nav.menu-open {
+        flex-direction: column;
+    }
+
+    nav.menu-open a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav.menu-open .language-switcher {
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+/* ===== WHATSAPP BUTTON ===== */
+
+.whatsapp-button {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+
+    background-color: #25D366;
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+    z-index: 9999;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    background-color: #1ebe5d;
+}
+
+@media (max-width: 768px) {
+
+    .whatsapp-button {
+        left: 12px;
+        bottom: 12px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .whatsapp-button {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        font-size: 0;
+    }
+
+    .whatsapp-button::before {
+        content: "💬";
+        font-size: 22px;
+    }
+
+}
+/* ===== WHATSAPP LOGO ===== */
+
+.whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover img {
+    transform: scale(1.15);
+}
+@media (max-width: 768px) {
+
+    .whatsapp-button img {
+        width: 26px;
+        height: 26px;
+    }
+
+}
+/* ===== CONTACT WHATSAPP ===== */
+
+.contact-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+.contact-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 211, 102, 0.25);
+}
+
+@media (max-width: 600px) {
+
+    .contact-whatsapp {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+}
+/* ===== EXTRA MOBILE IMPROVEMENTS ===== */
+
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    section h2 {
+        font-size: 25px;
+        line-height: 1.4;
+    }
+
+    #accueil {
+        min-height: 560px;
+        padding: 25px 18px;
+    }
+
+    #accueil h2 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    #accueil p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    .association-card,
+    .activite-card,
+    .projet-card,
+    .valeur-card,
+    .contact-card {
+        width: 100%;
+    }
+
+    .contact-button,
+    .contact-whatsapp {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+}
+/* ===== IMAGE IMPROVEMENT ===== */
+
+.activite-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f5f8fa;
+    border-radius: 16px;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.activite-card:hover .activite-image {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+
+    .activite-image {
+        height: 210px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .activite-image {
+        height: 195px;
+    }
+
+}
+.activite-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+#accueil::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+    z-index: 0;
+}
+/* ===== HERO SLIDER ===== */
+
+#accueil {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: #123B5D;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slides::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* ===== ARROWS ===== */
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.22);
+    color: white;
+
+    cursor: pointer;
+    z-index: 5;
+
+    transition: 0.3s ease;
+}
+
+.slider-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.40);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.slider-prev {
+    left: 25px;
+}
+
+.slider-next {
+    right: 25px;
+}
+
+
+/* ===== DOTS ===== */
+
+.slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    z-index: 5;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+
+    padding: 0;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.slider-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: white;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    #accueil {
+        min-height: 520px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-arrow svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .slider-prev {
+        left: 12px;
+    }
+
+    .slider-next {
+        right: 12px;
+    }
+
+    .slider-dots {
+        bottom: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    #accueil {
+        min-height: 560px;
+    }
+
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slider-arrow svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .slider-prev {
+        left: 8px;
+    }
+
+    .slider-next {
+        right: 8px;
+    }
+
+    .slider-dots {
+        bottom: 15px;
+        gap: 7px;
+    }
+
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .slider-dot.active {
+        width: 23px;
+    }
+}
+/* ================================
+   DESIGN BLEU PROFESSIONNEL
+================================ */
+
+section {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.94),
+        rgba(232, 244, 255, 0.90)
+    );
+    margin: 25px 4%;
+    padding: 70px 6%;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(11, 61, 145, 0.10);
+}
+
+/* Titres */
+section h2 {
+    color: #0B3D91;
+}
+
+section h2::after {
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+}
+
+/* Cartes */
+.association-card,
+.activite-card,
+.projet-card,
+.valeur-card,
+.contact-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(21, 101, 192, 0.12);
+    box-shadow: 0 8px 25px rgba(11, 61, 145, 0.10);
+}
+
+/* تأثير عند المرور */
+.association-card:hover,
+.activite-card:hover,
+.projet-card:hover,
+.valeur-card:hover,
+.contact-card:hover {
+    box-shadow: 0 14px 35px rgba(11, 61, 145, 0.18);
+}
+
+/* عناوين البطاقات */
+.association-card h3,
+.activite-card h3,
+.projet-card h3,
+.valeur-card h3,
+.contact-card h3 {
+    color: #0B3D91;
+}
+
+/* المجالات */
+.domaines div {
+    background: linear-gradient(135deg, #eaf4ff, #d4e9ff);
+    color: #0B3D91;
+    border: 1px solid rgba(21, 101, 192, 0.12);
+}
+
+/* أرقام المشاريع */
+.projet-number {
+    color: #1565C0;
+}
+/* ================================
+   HEADER BLEU PROFESSIONNEL
+================================ */
+
+header {
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #f4f9ff 50%,
+        #eaf4ff 100%
+    );
+    border-bottom: 3px solid #1565C0;
+    box-shadow: 0 4px 20px rgba(11, 61, 145, 0.12);
+}
+
+
+/* ================================
+   FOOTER BLEU PROFESSIONNEL
+================================ */
+
+footer {
+    background: linear-gradient(
+        135deg,
+        #082b66,
+        #0B3D91,
+        #1565C0
+    );
+    color: white;
+}
+
+footer h3,س
+footer p {
+    color: white;
+}
+
+footer .footer-line {
+    background: rgba(255, 255, 255, 0.35);
+}
+/* ================================
+   HERO SLIDER - ARROWS
+================================ */
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #0B3D91;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background: #0B3D91;
+    color: white;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.slider-prev {
+    left: 25px;
+}
+
+.slider-next {
+    right: 25px;
+}
+
+/* الهاتف */
+@media (max-width: 768px) {
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .slider-prev {
+        left: 12px;
+    }
+
+    .slider-next {
+        right: 12px;
+    }
+}
+/* ================================
+   HERO SLIDER - DOTS
+================================ */
+
+.slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 9px;
+
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 11px;
+    height: 11px;
+
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.slider-dot:hover {
+    background: white;
+    transform: scale(1.15);
+}
+
+.slider-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: white;
+}
+@media (max-width: 768px) {
+
+    .slider-dots {
+        bottom: 18px;
+    }
+
+    .slider-dot {
+        width: 9px;
+        height: 9px;
+    }
+
+    .slider-dot.active {
+        width: 23px;
+    }
+
+}
+/* ================================
+   تكبير صور Hero
+================================ */
+
+#accueil {
+    min-height: 550px;
+    height: 550px;
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* الهاتف */
+@media (max-width: 768px) {
+
+    #accueil {
+        min-height: 520px;
+        height: 520px;
+    }
+
+    .hero-slide {
+        background-position: center center;
+    }
+}
+/* =================================
+   تحسين محتوى Hero
+================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 40;
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 35px 45px;
+
+    text-align: center;
+
+    /* شفافية أكبر */
+    background: rgba(255, 255, 255, 0.04);
+
+    /* ضبابية خلفية */
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* العنوان */
+.hero-content h2 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.55);
+}
+
+/* الوصف */
+.hero-content p {
+    margin: 0 auto 28px;
+
+    max-width: 720px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    line-height: 1.7;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* الأزرار */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* الهاتف */
+@media (max-width: 768px) {
+
+    .hero-content {
+        max-width: 90%;
+        padding: 25px 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* الهاتف الصغير */
+@media (max-width: 480px) {
+
+    .hero-content {
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .hero-content h2 {
+        font-size: 25px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+}
+.hero-content {
+    transform: translateY(70px);
+}
+/* =================================
+   أزرار Hero - تصميم احترافي
+================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* الزر الأساسي */
+.hero-buttons .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+    padding: 13px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #0B3D91,
+        #1565C0
+    );
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 18px rgba(11, 61, 145, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* الزر الثاني */
+.hero-buttons .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+    padding: 13px 25px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* تأثير الماوس */
+.hero-buttons .btn-primary:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #1565C0,
+        #1976D2
+    );
+
+    box-shadow:
+        0 10px 25px rgba(11, 61, 145, 0.45);
+}
+
+.hero-buttons .btn-secondary:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* عند الضغط */
+.hero-buttons a:active {
+    transform: translateY(0);
+}
+
+/* الهاتف */
+@media (max-width: 768px) {
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        min-width: 155px;
+        padding: 11px 18px;
+        font-size: 15px;
+    }
+}
+
+/* الهاتف الصغير */
+@media (max-width: 480px) {
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 85%;
+        max-width: 240px;
+    }
+}
+/* =================================
+   Notre association - تصميم احترافي
+================================= */
+
+#association {
+    position: relative;
+    overflow: hidden;
+}
+
+/* عنوان القسم */
+#association h2 {
+    text-align: center;
+    margin-bottom: 35px;
+
+    color: #0B3D91;
+    font-size: 34px;
+    font-weight: 700;
+
+    position: relative;
+}
+
+/* خط صغير تحت العنوان */
+/* =================================
+   خط زخرفي تحت عناوين الأقسام
+================================= */
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 4px;
+
+    margin: 12px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        #0B3D91,
+        #42A5F5
+    );
+
+    border-radius: 10px;
+}
+
+/* النص داخل القسم */
+#association p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+
+    color: #38516a;
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    text-align: center;
+}
+
+/* إذا كان هناك أكثر من فقرة */
+#association p + p {
+    margin-top: 12px;
+}
+
+/* تأثير خفيف عند المرور على القسم */
+#association {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* الهاتف */
+@media (max-width: 768px) {
+
+    #association h2 {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+
+    #association p {
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+/* الهاتف الصغير */
+@media (max-width: 480px) {
+
+    #association h2 {
+        font-size: 25px;
+    }
+
+    #association p {
+        font-size: 15px;
+    }
+}
+/* =================================
+   Nos activités - بطاقات احترافية
+================================= */
+
+#activites .activites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+/* بطاقة النشاط */
+#activites .activite-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(21, 101, 192, 0.12);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(11, 61, 145, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* حركة البطاقة */
+#activites .activite-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(11, 61, 145, 0.18);
+
+    border-color: rgba(21, 101, 192, 0.30);
+}
+
+/* الصورة */
+#activites .activite-image {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* تكبير الصورة عند المرور */
+#activites .activite-card:hover .activite-image {
+    transform: scale(1.04);
+    filter: brightness(1.05);
+}
+
+/* محتوى البطاقة */
+#activites .activite-content {
+    padding: 22px 24px 25px;
+}
+
+/* عنوان النشاط */
+#activites .activite-card h3 {
+    margin: 0 0 10px;
+
+    color: #0B3D91;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* وصف النشاط */
+#activites .activite-card p {
+    margin: 0;
+
+    color: #526b82;
+
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+/* خط صغير أسفل العنوان */
+#activites .activite-card h3::after {
+    content: "";
+
+    display: block;
+
+    width: 38px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background: #42A5F5;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+#activites .activite-card:hover h3::after {
+    width: 65px;
+}
+
+/* ================================
+   الهاتف
+================================ */
+
+@media (max-width: 768px) {
+
+    #activites .activites-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #activites .activite-image {
+        height: 220px;
+    }
+
+    #activites .activite-content {
+        padding: 20px;
+    }
+
+    #activites .activite-card h3 {
+        font-size: 19px;
+    }
+
+    #activites .activite-card p {
+        font-size: 15px;
+    }
+}
+
+/* هاتف صغير */
+@media (max-width: 480px) {
+
+    #activites .activite-image {
+        height: 195px;
+    }
+
+    #activites .activite-content {
+        padding: 18px;
+    }
+}
+/* =================================
+   Nos projets - تصميم احترافي
+================================= */
+
+#projets {
+    position: relative;
+}
+
+/* شبكة المشاريع */
+#projets .projets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* بطاقة المشروع */
+#projets .projet-card {
+    position: relative;
+
+    padding: 30px 25px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(232, 244, 255, 0.90)
+    );
+
+    border: 1px solid rgba(21, 101, 192, 0.12);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(11, 61, 145, 0.09);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* حركة البطاقة */
+#projets .projet-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(11, 61, 145, 0.16);
+
+    border-color: rgba(21, 101, 192, 0.28);
+}
+
+/* أيقونة المشروع */
+#projets .projet-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #0B3D91,
+        #42A5F5
+    );
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 7px 18px rgba(11, 61, 145, 0.22);
+
+    transition:
+        transform 0.35s ease;
+}
+
+/* حركة الأيقونة */
+#projets .projet-card:hover .projet-icon {
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* عنوان المشروع */
+#projets .projet-card h3 {
+    margin: 0 0 12px;
+
+    color: #0B3D91;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* وصف المشروع */
+#projets .projet-card p {
+    margin: 0;
+
+    color: #526b82;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* خط صغير */
+#projets .projet-card h3::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 3px;
+
+    margin: 9px auto 0;
+
+    background: #42A5F5;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+#projets .projet-card:hover h3::after {
+    width: 55px;
+}
+
+
+/* =================================
+   الهاتف
+================================= */
+
+@media (max-width: 900px) {
+
+    #projets .projets-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    #projets .projets-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #projets .projet-card {
+        padding: 25px 20px;
+    }
+}
+/* =================================
+   Nos valeurs - تصميم احترافي
+================================= */
+
+#valeurs {
+    position: relative;
+}
+
+/* شبكة القيم */
+#valeurs .valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+/* بطاقة القيمة */
+#valeurs .valeur-card {
+    padding: 28px 20px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(21, 101, 192, 0.12);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 22px rgba(11, 61, 145, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+/* حركة البطاقة */
+#valeurs .valeur-card:hover {
+    transform: translateY(-6px);
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #edf6ff
+    );
+
+    box-shadow:
+        0 14px 30px rgba(11, 61, 145, 0.15);
+}
+
+/* الأيقونة */
+#valeurs .valeur-icon {
+    width: 62px;
+    height: 62px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #0B3D91,
+        #42A5F5
+    );
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 6px 16px rgba(11, 61, 145, 0.20);
+
+    transition:
+        transform 0.35s ease;
+}
+
+/* حركة الأيقونة */
+#valeurs .valeur-card:hover .valeur-icon {
+    transform: scale(1.08);
+}
+
+/* عنوان القيمة */
+#valeurs .valeur-card h3 {
+    margin: 0 0 10px;
+
+    color: #0B3D91;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* وصف القيمة */
+#valeurs .valeur-card p {
+    margin: 0;
+
+    color: #526b82;
+
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+
+/* خط صغير تحت العنوان */
+#valeurs .valeur-card h3::after {
+    content: "";
+
+    display: block;
+
+    width: 30px;
+    height: 3px;
+
+    margin: 8px auto 0;
+
+    background: #42A5F5;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+#valeurs .valeur-card:hover h3::after {
+    width: 50px;
+}
+
+
+/* =================================
+   الشاشات المتوسطة
+================================= */
+
+@media (max-width: 1000px) {
+
+    #valeurs .valeurs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =================================
+   الهاتف
+================================= */
+
+@media (max-width: 600px) {
+
+    #valeurs .valeurs-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #valeurs .valeur-card {
+        padding: 25px 20px;
+    }
+}
+/* =================================
+   Contactez-nous - تصميم احترافي
+================================= */
+
+#contact {
+    position: relative;
+}
+
+/* محتوى التواصل */
+#contact .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    max-width: 1000px;
+    margin: 35px auto 0;
+}
+
+/* بطاقة معلومات التواصل */
+#contact .contact-info {
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        #0B3D91,
+        #1565C0
+    );
+
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 28px rgba(11, 61, 145, 0.18);
+}
+
+/* عنوان البطاقة */
+#contact .contact-info h3 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+/* عناصر التواصل */
+#contact .contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+/* الأيقونة */
+#contact .contact-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+/* النص */
+#contact .contact-item p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* الروابط */
+#contact .contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+#contact .contact-item a:hover {
+    opacity: 0.75;
+}
+
+
+/* =================================
+   نموذج التواصل
+================================= */
+
+#contact .contact-form {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(21, 101, 192, 0.12);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 28px rgba(11, 61, 145, 0.08);
+}
+
+/* الحقول */
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    margin-bottom: 15px;
+
+    background: #f7fbff;
+
+    color: #17324d;
+
+    border: 1px solid #d6e6f5;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* عند الضغط داخل الحقل */
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    border-color: #1565C0;
+
+    box-shadow:
+        0 0 0 3px rgba(21, 101, 192, 0.10);
+}
+
+/* مربع الرسالة */
+#contact .contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* زر الإرسال */
+#contact .contact-form button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #0B3D91,
+        #1565C0
+    );
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(11, 61, 145, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#contact .contact-form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(11, 61, 145, 0.35);
+}
+
+
+/* =================================
+   الهاتف
+================================= */
+
+@media (max-width: 768px) {
+
+    #contact .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #contact .contact-info,
+    #contact .contact-form {
+        padding: 25px 20px;
+    }
+}
+/* =================================
+   تصغير وتنسيق حجم الموقع
+================================= */
+
+/* الأقسام */
+section {
+    margin: 20px 3%;
+    padding: 55px 5%;
+    border-radius: 20px;
+}
+
+/* عناوين الأقسام */
+section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* النصوص العامة */
+section p {
+    font-size: 16px;
+}
+
+/* البطاقات */
+.activite-card,
+.projet-card,
+.valeur-card {
+    border-radius: 16px;
+}
+
+/* صور الأنشطة */
+#activites .activite-image {
+    height: 215px;
+}
+
+/* المسافات داخل البطاقات */
+#activites .activite-content {
+    padding: 18px 20px 20px;
+}
+
+#projets .projet-card {
+    padding: 25px 20px;
+}
+
+#valeurs .valeur-card {
+    padding: 23px 18px;
+}
+
+/* عنوان البطاقات */
+#activites .activite-card h3,
+#projets .projet-card h3,
+#valeurs .valeur-card h3 {
+    font-size: 18px;
+}
+
+/* =================================
+   الهاتف
+================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        margin: 15px 2.5%;
+        padding: 40px 5%;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    #activites .activite-image {
+        height: 200px;
+    }
+}
+/* =================================
+   Header & Navbar - حجم أنيق
+================================= */
+
+header {
+    padding: 10px 4%;
+}
+
+/* الشعار */
+header img {
+    max-height: 58px;
+    width: auto;
+}
+
+/* اسم الجمعية */
+header h1 {
+    font-size: 21px;
+    margin: 0;
+}
+
+/* القائمة */
+nav ul {
+    gap: 6px;
+}
+
+nav a {
+    padding: 8px 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 20px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* تأثير الماوس */
+nav a:hover {
+    background: rgba(21, 101, 192, 0.10);
+    color: #0B3D91;
+}
+
+/* =================================
+   الهاتف
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        max-height: 50px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+.contact-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 24px;
+    background: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+    transition: all 0.3s ease;
+}
+
+.contact-whatsapp:hover {
+    background: #20bd5a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
