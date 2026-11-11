@@ -72,7 +72,7 @@ header {
 
 nav {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -2812,4 +2812,2625 @@ nav a:hover {
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+/* ===== FACEBOOK BUTTON ===== */
+
+.contact-facebook {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 24px;
+
+    background: #1877F2;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.contact-facebook:hover {
+    background: #0d65d9;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.35);
+}
+
+/* الهاتف */
+@media (max-width: 600px) {
+
+    .contact-facebook {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+/* ===== CONTACT SOCIAL BUTTONS ===== */
+
+.contact-button,
+.contact-whatsapp,
+.contact-facebook {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+    min-height: 46px;
+
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+
+/* ===== EMAIL ===== */
+
+.contact-button {
+    background: linear-gradient(135deg, #1565C0, #0B3D91);
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #0B3D91, #08306b);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(11, 61, 145, 0.30);
+}
+
+
+/* ===== WHATSAPP ===== */
+
+.contact-whatsapp {
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+}
+
+.contact-whatsapp:hover {
+    background: linear-gradient(135deg, #1ebe5d, #159447);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(37, 211, 102, 0.30);
+}
+
+
+/* ===== FACEBOOK ===== */
+
+.contact-facebook {
+    background: linear-gradient(135deg, #1877F2, #0d65d9);
+}
+
+.contact-facebook:hover {
+    background: linear-gradient(135deg, #0d65d9, #0a54b5);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(24, 119, 242, 0.30);
+}
+
+
+/* ===== ALIGNMENT ===== */
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .contact-button,
+    .contact-whatsapp,
+    .contact-facebook {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 240px;
+        height: 54px;
+    
+        padding: 0 20px;
+    
+        border: none;
+        border-radius: 14px;
+    
+        color: #ffffff !important;
+        text-decoration: none !important;
+    
+        font-size: 16px;
+        font-weight: 600;
+    
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    
+        transition: all 0.3s ease;
+    }
+} 
+/* =========================================
+   ACTUALITÉS
+========================================= */
+
+#actualites {
+    padding: 80px 5%;
+}
+
+#actualites h2 {
+    text-align: center;
+    color: #234B63;
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+.actualites-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.actualite-card {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(11, 61, 145, 0.12);
+    border: 1px solid rgba(21, 101, 192, 0.12);
+}
+
+/* الصور الست */
+
+/* =========================================
+   GALERIE DES 6 PHOTOS
+========================================= */
+
+.actualite-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 175px 175px;
+    gap: 5px;
+    height: 355px;
+    background: #eaf4ff;
+    overflow: hidden;
+}
+
+.actualite-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* الصورة الأولى كبيرة */
+.actualite-images img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+/* الصور 2 و 3 */
+.actualite-images img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.actualite-images img:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* الصور 4 و 5 */
+.actualite-images img:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.actualite-images img:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* الصورة السادسة */
+.actualite-images img:nth-child(6) {
+    display: none;
+}
+
+.actualite-images img:hover {
+    transform: scale(1.03);
+}
+
+/* محتوى الخبر */
+
+.actualite-content {
+    padding: 30px;
+}
+
+.actualite-date {
+    display: inline-block;
+    background: #2F6F8F;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.actualite-content h3 {
+    color: #234B63;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.actualite-content p {
+    color: #334E5C;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.actualite-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e0eaf0;
+    color: #2F6F8F;
+    font-weight: bold;
+}
+
+/* العربية */
+
+html[dir="rtl"] .actualite-content {
+    text-align: right;
+}
+
+/* الهاتف */
+
+@media (max-width: 768px) {
+
+    #actualites {
+        padding: 60px 20px;
+    }
+
+    #actualites h2 {
+        font-size: 27px;
+    }
+
+    .actualite-images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 180px);
+        height: auto;
+    }
+
+    .actualite-images img:first-child {
+        grid-row: auto;
+    }
+
+    .actualite-images img {
+        height: 180px;
+    }
+
+    .actualite-content {
+        padding: 22px;
+    }
+
+    .actualite-content h3 {
+        font-size: 20px;
+    }
+
+}
+/* =========================================
+   GALERIE ACTUALITÉ
+========================================= */
+
+.actualite-gallery {
+    width: 100%;
+    background: #eaf4ff;
+    overflow: hidden;
+}
+
+/* منطقة الصورة */
+
+.gallery-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #dbeeff;
+}
+
+/* الصورة */
+
+.gallery-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+/* الأسهم */
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(11, 61, 145, 0.85);
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #0B3D91;
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* النقاط */
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 15px;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #a9c9e5;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.gallery-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: #1565C0;
+}
+
+
+/* =========================================
+   RTL
+========================================= */
+
+html[dir="rtl"] .gallery-prev {
+    left: auto;
+    right: 20px;
+}
+
+html[dir="rtl"] .gallery-next {
+    right: auto;
+    left: 20px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-image-container {
+        height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
+    html[dir="rtl"] .gallery-prev {
+        right: 10px;
+        left: auto;
+    }
+
+    html[dir="rtl"] .gallery-next {
+        left: 10px;
+        right: auto;
+    }
+
+}
+/* =========================================
+   DATE + LIRE LA SUITE
+========================================= */
+
+.actualite-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.actualite-date {
+    display: inline-block;
+    background: #2F6F8F;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.actualite-date-value {
+    color: #647b8a;
+    font-size: 14px;
+}
+
+/* النص الإضافي مخفي في البداية */
+
+.actualite-more-content {
+    display: none;
+}
+
+.actualite-more-content.show {
+    display: block;
+}
+
+/* زر اقرأ المزيد */
+
+.actualite-more-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #1565C0;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.actualite-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-2px);
+}
+
+/* العربية */
+
+html[dir="rtl"] .actualite-meta {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .actualite-content {
+    text-align: right;
+}
+/* =========================================
+   تحسين تنسيق خبر الفرصة الثانية
+========================================= */
+
+.actualite-card {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* محتوى الخبر */
+
+.actualite-content {
+    padding: 35px 45px 30px;
+    text-align: left;
+}
+
+/* العربية */
+
+html[dir="rtl"] .actualite-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* التاريخ */
+
+.actualite-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+html[dir="rtl"] .actualite-meta {
+    justify-content: flex-start;
+}
+
+/* الموسم الدراسي */
+
+.actualite-saison {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 18px;
+
+    background: #eaf4ff;
+    color: #1565C0;
+
+    border: 1px solid #b9d8f5;
+    border-radius: 20px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* عنوان الخبر */
+
+.actualite-content h3 {
+    margin: 0 0 18px;
+
+    color: #234B63;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.6;
+
+    text-align: left;
+}
+
+html[dir="rtl"] .actualite-content h3 {
+    text-align: right;
+}
+
+/* نص الخبر */
+
+.actualite-content > p,
+.actualite-more-content p {
+    margin: 0 0 18px;
+
+    color: #334E5C;
+
+    font-size: 17px;
+    line-height: 2;
+
+    text-align: left;
+}
+
+html[dir="rtl"] .actualite-content > p,
+html[dir="rtl"] .actualite-more-content p {
+    text-align: right;
+}
+
+/* زر اقرأ المزيد */
+
+.actualite-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+
+    padding: 11px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #1565C0;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+html[dir="rtl"] .actualite-more-btn {
+    float: right;
+}
+
+.actualite-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-2px);
+}
+
+/* أسفل الخبر */
+
+.actualite-footer {
+    clear: both;
+
+    margin-top: 30px;
+    padding-top: 18px;
+
+    border-top: 1px solid #e0eaf0;
+
+    color: #2F6F8F;
+
+    font-weight: bold;
+
+    text-align: left;
+}
+
+html[dir="rtl"] .actualite-footer {
+    text-align: right;
+}
+
+/* =========================================
+   الهاتف
+========================================= */
+
+@media (max-width: 768px) {
+
+    .actualite-content {
+        padding: 25px 20px;
+    }
+
+    .actualite-content h3 {
+        font-size: 21px;
+        line-height: 1.6;
+    }
+
+    .actualite-content > p,
+    .actualite-more-content p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .actualite-meta {
+        margin-bottom: 16px;
+    }
+
+}
+/* =========================================
+   FINAL - ALIGNEMENT DU CONTENU DE L'ACTUALITÉ
+========================================= */
+
+.actualite-content {
+    text-align: left !important;
+}
+
+/* العنوان الفرنسي */
+.actualite-content h3 {
+    text-align: left !important;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* الفقرات الفرنسية */
+.actualite-content p {
+    text-align: left !important;
+    margin-bottom: 15px;
+}
+
+/* العربية */
+html[dir="rtl"] .actualite-content {
+    direction: rtl;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .actualite-content h3 {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .actualite-content p {
+    text-align: right !important;
+}
+
+/* زر اقرأ المزيد */
+.actualite-more-btn {
+    display: block;
+    margin: 20px 0 0 auto;
+}
+
+html[dir="rtl"] .actualite-more-btn {
+    margin: 20px auto 0 0;
+}
+
+/* اسم الجمعية */
+.actualite-footer {
+    text-align: left !important;
+}
+
+html[dir="rtl"] .actualite-footer {
+    text-align: right !important;
+}
+/* =========================================
+   ACTUALITÉ - DESIGN FINAL
+========================================= */
+
+#actualites {
+    padding: 45px 5%;
+}
+
+.actualites-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.actualite-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(11, 61, 145, 0.12);
+}
+
+
+/* =========================================
+   GALERIE
+========================================= */
+
+.actualite-gallery {
+    width: 100%;
+}
+
+.gallery-image-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    background: #eaf4ff;
+}
+
+.gallery-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+
+/* الأسهم */
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(21, 101, 192, 0.88);
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    transition: 0.3s ease;
+}
+
+.gallery-prev {
+    left: 18px;
+}
+
+.gallery-next {
+    right: 18px;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #0B3D91;
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* النقاط */
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 0;
+}
+
+.gallery-dot {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #b8cfe3;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.gallery-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #1565C0;
+}
+
+
+/* =========================================
+   CONTENU DU NEWS
+========================================= */
+
+.actualite-content {
+    padding: 25px 40px 28px;
+
+    direction: ltr;
+    text-align: left;
+}
+
+
+/* معلومات الخبر */
+
+.actualite-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+
+/* Actualité */
+
+.actualite-date {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 15px;
+
+    background: #2F6F8F;
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* التاريخ */
+
+.actualite-date-value {
+    color: #607d8b;
+
+    font-size: 14px;
+}
+
+
+/* الموسم الدراسي */
+
+.actualite-saison {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 15px;
+
+    background: #eaf4ff;
+    color: #1565C0;
+
+    border: 1px solid #c5dcef;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+.actualite-content h3 {
+    margin: 0 0 12px;
+
+    color: #234B63;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   TEXTE
+========================================= */
+
+.actualite-content > p,
+.actualite-more-content p {
+    margin: 0 0 10px;
+
+    color: #334E5C;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    text-align: left;
+}
+
+
+/* النص الإضافي */
+
+.actualite-more-content {
+    display: none;
+}
+
+.actualite-more-content.show {
+    display: block;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.actualite-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+
+    padding: 9px 20px;
+
+    border: none;
+    border-radius: 22px;
+
+    background: #1565C0;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.actualite-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   العربية
+========================================= */
+
+html[dir="rtl"] .actualite-content {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-meta {
+    direction: rtl;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .actualite-content h3 {
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-content > p,
+html[dir="rtl"] .actualite-more-content p {
+    text-align: right;
+}
+
+
+/* =========================================
+   الهاتف
+========================================= */
+
+@media (max-width: 768px) {
+
+    #actualites {
+        padding: 30px 15px;
+    }
+
+    .gallery-image-container {
+        height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
+    .actualite-content {
+        padding: 20px 18px 23px;
+    }
+
+    .actualite-meta {
+        gap: 7px;
+        margin-bottom: 12px;
+    }
+
+    .actualite-date,
+    .actualite-date-value,
+    .actualite-saison {
+        font-size: 12px;
+        padding: 6px 11px;
+    }
+
+    .actualite-content h3 {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+    .actualite-content > p,
+    .actualite-more-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+/* =========================================
+   تصحيح ترتيب الخبر باللغة العربية
+========================================= */
+
+html[dir="rtl"] .actualite-content {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-meta {
+    direction: rtl !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    align-items: center;
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-date,
+html[dir="rtl"] .actualite-date-value,
+html[dir="rtl"] .actualite-saison {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-content h3,
+html[dir="rtl"] .actualite-content > p,
+html[dir="rtl"] .actualite-more-content p {
+    direction: rtl;
+    text-align: right;
+}
+/* =========================================
+   تحسين الموسم الدراسي
+========================================= */
+
+.actualite-saison {
+    font-size: 13px !important;
+    padding: 6px 13px !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+html[dir="rtl"] .actualite-saison {
+    direction: rtl;
+    text-align: right;
+}
+/* =====================================================
+   CONTACT SECTION - NEW CLEAN DESIGN
+===================================================== */
+
+#contact {
+    background: linear-gradient(135deg, #f4f9ff, #e8f3ff);
+    padding: 65px 5%;
+}
+
+/* عنوان القسم */
+
+#contact > h2 {
+    text-align: center;
+    color: #0B3D91;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#contact > h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+}
+
+
+/* النص الموجود تحت العنوان */
+
+#contact .contact-intro {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+    color: #496477;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* الحاوية */
+
+#contact .contact-content {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* البطاقات */
+
+#contact .contact-card {
+    background: #ffffff;
+
+    border: 1px solid rgba(21, 101, 192, 0.10);
+    border-radius: 18px;
+
+    padding: 38px 40px;
+
+    min-height: 390px;
+
+    box-shadow: 0 10px 30px rgba(11, 61, 145, 0.10);
+
+    box-sizing: border-box;
+}
+
+
+/* عناوين البطاقات */
+
+#contact .contact-card h3 {
+    color: #0B3D91;
+    font-size: 24px;
+
+    margin: 0 0 30px;
+
+    text-align: center;
+}
+
+
+/* بطاقة المعلومات */
+
+#contact .contact-card:first-child {
+    text-align: left;
+}
+
+
+/* معلومات الاتصال */
+
+#contact .contact-card:first-child p {
+    margin: 0 0 28px;
+
+    color: #334E5C;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* اسم الحقل */
+
+#contact .contact-card:first-child strong {
+    display: inline-block;
+
+    color: #234B63;
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+/* الروابط */
+
+#contact .contact-card:first-child a {
+    color: #28719C;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    line-height: 1.7;
+}
+
+#contact .contact-card:first-child a:hover {
+    color: #0B3D91;
+    text-decoration: underline;
+}
+
+
+/* البطاقة الثانية */
+
+#contact .contact-card:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* النص */
+
+#contact .contact-card:last-child > p {
+    max-width: 430px;
+
+    margin: 0 auto 30px;
+
+    color: #496477;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+#contact .contact-button,
+#contact .contact-whatsapp,
+#contact .contact-facebook {
+
+    width: 230px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 14px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Email */
+
+#contact .contact-button {
+    background: linear-gradient(135deg, #1565C0, #0B3D91);
+}
+
+
+/* WhatsApp */
+
+#contact .contact-whatsapp {
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+
+    margin-left: 0;
+}
+
+
+/* Facebook */
+
+#contact .contact-facebook {
+    background: linear-gradient(135deg, #1877F2, #0d65d9);
+}
+
+
+/* Hover */
+
+#contact .contact-button:hover,
+#contact .contact-whatsapp:hover,
+#contact .contact-facebook:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =====================================================
+   ARABIC
+===================================================== */
+
+html[dir="rtl"] #contact .contact-card:first-child {
+    text-align: right;
+}
+
+html[dir="rtl"] #contact .contact-card:last-child {
+    text-align: center;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    #contact .contact-content {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    #contact .contact-card {
+        min-height: auto;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #contact {
+        padding: 50px 18px;
+    }
+
+    #contact > h2 {
+        font-size: 27px;
+    }
+
+    #contact .contact-intro {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    #contact .contact-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #contact .contact-card {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    #contact .contact-card h3 {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+
+    #contact .contact-card:first-child p {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    #contact .contact-button,
+    #contact .contact-whatsapp,
+    #contact .contact-facebook {
+        width: 100%;
+        max-width: 300px;
+        height: 52px;
+    }
+}
+/* ==========================================
+   CONTACT - INFORMATIONS
+========================================== */
+
+#contact .contact-info-card {
+    display: block !important;
+    text-align: left !important;
+    padding: 40px !important;
+}
+
+/* titre */
+
+#contact .contact-info-card h3 {
+    text-align: center !important;
+    margin: 0 0 42px !important;
+}
+
+/* chaque ligne */
+
+#contact .info-row {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+
+    gap: 16px !important;
+
+    margin: 0 0 30px !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+#contact .info-row:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+/* icône */
+
+#contact .info-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #eef6ff !important;
+
+    border-radius: 50% !important;
+
+    font-size: 19px !important;
+
+    line-height: 1 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* bloc texte */
+
+#contact .info-content {
+    flex: 1 !important;
+
+    display: block !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* Adresse / Email / Téléphone */
+
+#contact .info-title {
+    display: block !important;
+
+    margin: 0 0 5px !important;
+
+    padding: 0 !important;
+
+    color: #234b63 !important;
+
+    font-size: 17px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.4 !important;
+}
+
+
+/* contenu */
+
+#contact .info-value {
+    display: block !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: #28719c !important;
+
+    font-size: 15px !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1.7 !important;
+
+    text-decoration: none !important;
+
+    word-break: break-word !important;
+}
+
+
+/* liens */
+
+#contact a.info-value:hover {
+    color: #0b3d91 !important;
+
+    text-decoration: underline !important;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    #contact .contact-info-card {
+        padding: 28px 22px !important;
+    }
+
+    #contact .contact-info-card h3 {
+        margin-bottom: 32px !important;
+        font-size: 21px !important;
+    }
+
+    #contact .info-row {
+        gap: 12px !important;
+        margin-bottom: 25px !important;
+    }
+
+    #contact .info-icon {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        font-size: 17px !important;
+    }
+
+    #contact .info-title {
+        font-size: 15px !important;
+    }
+
+    #contact .info-value {
+        font-size: 14px !important;
+    }
+}
+
+
+/* ==========================================
+   ARABIC
+========================================== */
+
+html[dir="rtl"] #contact .contact-info-card {
+    text-align: right !important;
+}
+
+html[dir="rtl"] #contact .info-row {
+    flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] #contact .info-content {
+    text-align: right !important;
+}
+/* ==========================================
+   CONTACT - ACTION CARD
+========================================== */
+
+#contact .contact-action-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    padding: 40px !important;
+}
+
+
+/* العنوان */
+
+#contact .contact-action-card h3 {
+    margin: 0 0 30px !important;
+
+    color: #0B3D91 !important;
+
+    font-size: 24px !important;
+
+    text-align: center !important;
+}
+
+
+/* النص */
+
+#contact .contact-action-text {
+    max-width: 430px !important;
+
+    margin: 0 auto 35px !important;
+
+    color: #496477 !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.8 !important;
+
+    text-align: center !important;
+}
+
+
+/* حاوية الأزرار */
+
+#contact .contact-actions {
+    width: 100% !important;
+    max-width: 310px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 14px !important;
+
+    margin: auto !important;
+}
+
+
+/* كل زر */
+
+#contact .action-btn {
+    width: 100% !important;
+    height: 54px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 10px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 12px !important;
+
+    color: white !important;
+
+    text-decoration: none !important;
+
+    font-size: 16px !important;
+    font-weight: 700 !important;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+
+    transition: all 0.25s ease !important;
+}
+
+
+/* Email */
+
+#contact .email-action {
+    background: linear-gradient(135deg, #1565C0, #0B3D91) !important;
+}
+
+
+/* WhatsApp */
+
+#contact .whatsapp-action {
+    background: linear-gradient(135deg, #25D366, #1ebe5d) !important;
+}
+
+
+/* Facebook */
+
+#contact .facebook-action {
+    background: linear-gradient(135deg, #1877F2, #0d65d9) !important;
+}
+
+
+/* Hover */
+
+#contact .action-btn:hover {
+    transform: translateY(-3px) !important;
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    #contact .contact-action-card {
+        padding: 28px 22px !important;
+    }
+
+    #contact .contact-action-card h3 {
+        font-size: 21px !important;
+        margin-bottom: 25px !important;
+    }
+
+    #contact .contact-action-text {
+        font-size: 15px !important;
+        margin-bottom: 28px !important;
+    }
+
+    #contact .contact-actions {
+        max-width: 100% !important;
+    }
+
+    #contact .action-btn {
+        height: 52px !important;
+    }
+}
+
+
+.activite-icon img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.activite-icon img:hover {
+    transform: scale(1.05);
+    }
+
+
+/* =====================================
+   MOBILE HEADER - تحسين القائمة للهاتف
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 14px !important;
+        gap: 10px !important;
+    }
+
+    .logo-container {
+        width: auto !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 9px !important;
+    }
+
+    .logo-container img {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .logo-container h1 .association-name {
+        font-size: 15px !important;
+    }
+
+    .logo-container h1 .association-subtitle {
+        font-size: 9px !important;
+    }
+
+    nav {
+        width: auto !important;
+        justify-content: flex-end !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        padding: 8px 12px !important;
+        font-size: 21px !important;
+    }
+
+    nav.menu-open {
+        position: absolute !important;
+        top: 100% !important;
+        right: 12px !important;
+        width: 230px !important;
+        background: white !important;
+        padding: 15px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        flex-direction: column !important;
+        align-items: stretch !important;
+        z-index: 2000 !important;
+    }
+
+    nav.menu-open a,
+    nav.menu-open .language-switcher {
+        display: flex !important;
+        justify-content: center !important;
+        padding: 10px !important;
+    }
+}
+
+/* اتجاه القائمة بالعربية */
+html[dir="rtl"] nav.menu-open {
+    right: auto !important;
+    left: 12px !important;
+}
+
+/* =====================================
+   ACTUALITES - GRILLE DE CARTES
+===================================== */
+
+.actualites-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    align-items: start;
+}
+
+.actualite-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(20, 75, 130, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+.actualite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(20, 75, 130, 0.16);
+}
+
+.actualite-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.actualite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.actualite-card:hover .actualite-image img {
+    transform: scale(1.04);
+}
+
+.actualite-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.actualite-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.actualite-date,
+.actualite-saison {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #eaf3ff;
+    color: #1764b5;
+}
+
+.actualite-content h3 {
+    color: #174d75;
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.actualite-content > p {
+    color: #526477;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 12px;
+}
+
+.actualite-more-content {
+    display: none;
+}
+
+.actualite-more-content.show {
+    display: block;
+}
+
+.actualite-more-content p {
+    color: #526477;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.actualite-more-btn {
+    margin-top: 12px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #1764b5;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.actualite-more-btn:hover {
+    background: #2d7898;
+}
+
+/* Tablette */
+@media (max-width: 992px) {
+    .actualites-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+    .actualites-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .actualite-image {
+        height: 210px;
+    }
+
+    .actualite-content {
+        padding: 18px;
+    }
+
+    .actualite-content h3 {
+        font-size: 17px;
+    }
+}
+
+/* Alignement arabe */
+html[dir="rtl"] .actualite-content {
+    align-items: flex-start;
+    text-align: right;
+}
+
+html[dir="rtl"] .actualite-meta {
+    justify-content: flex-start;
+}
+
+/* =========================================
+   ACTUALITE MODAL - CENTRE TABOULA
+========================================= */
+
+
+.actualite-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px 15px;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.actualite-modal.active {
+    display: flex;
+}
+
+.actualite-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: calc(100vh - 40px);
+    margin: auto;
+    padding: 35px;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    animation: taboulaModalShow 0.3s ease;
+}
+
+
+@keyframes taboulaModalShow {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bouton fermer */
+
+.actualite-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #eaf2f8;
+    color: #164b75;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actualite-modal-close:hover {
+    background: #164b75;
+    color: #ffffff;
+}
+
+/* Titre */
+
+.actualite-modal-content h2 {
+    color: #164b75;
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 15px 35px 25px 0;
+    text-align: left;
+}
+
+/* Galerie */
+
+.taboula-gallery {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f4f7;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.taboula-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Boutons précédent / suivant */
+
+.taboula-gallery button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(22, 75, 117, 0.85);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.taboula-gallery button:hover {
+    background: #164b75;
+}
+
+.taboula-gallery .taboula-prev {
+    left: 12px;
+}
+
+.taboula-gallery .taboula-next {
+    right: 12px;
+}
+
+/* Points de navigation */
+
+.taboula-gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin: 18px 0 25px;
+}
+
+.taboula-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #c5d2dc;
+    cursor: pointer;
+}
+
+.taboula-dot.active {
+    background: #164b75;
+    transform: scale(1.25);
+}
+
+/* Texte du خبر */
+
+.taboula-description {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.taboula-description p {
+    margin-bottom: 15px;
+}
+
+/* Arabe */
+
+html[dir="rtl"] .actualite-modal-content {
+    direction: rtl;
+}
+
+html[dir="rtl"] .actualite-modal-close {
+    right: auto;
+    left: 18px;
+}
+
+html[dir="rtl"] .actualite-modal-content h2 {
+    text-align: right;
+    margin: 15px 0 25px 35px;
+}
+
+html[dir="rtl"] .taboula-description {
+    text-align: right;
+}
+
+/* Téléphone */
+
+@media (max-width: 600px) {
+
+    .actualite-modal {
+        padding: 10px;
+    }
+
+    .actualite-modal-content {
+        padding: 22px 15px;
+        border-radius: 12px;
+    }
+
+    .actualite-modal-content h2 {
+        font-size: 19px;
+        margin-top: 35px;
+    }
+
+    .taboula-gallery {
+        height: 260px;
+    }
+
+    .taboula-description {
+        font-size: 14px;
+    }
+
+}
+
+/* =================================
+   AMELIORATION DES BOUTONS ACTUALITE
+================================= */
+
+/* زر الإغلاق */
+.actualite-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf5ff;
+    color: #0B3D91;
+    border: 2px solid #d5e7fb;
+    border-radius: 50%;
+    font-size: 27px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(11, 61, 145, 0.12);
+    transition: all 0.3s ease;
+}
+
+.actualite-modal-close:hover {
+    background: #0B3D91;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* أسهم الصور */
+.taboula-gallery button {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 61, 145, 0.88);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+    transition: all 0.3s ease;
+}
+
+.taboula-gallery button:hover {
+    background: #42A5F5;
+    transform: translateY(-50%) scale(1.12);
+}
+
+/* نقاط الصور */
+.taboula-gallery-dots {
+    gap: 10px;
+    margin: 20px 0 25px;
+}
+
+.taboula-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    background: #c5d7e9;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.taboula-dot:hover {
+    background: #42A5F5;
+    transform: scale(1.2);
+}
+
+.taboula-dot.active {
+    width: 30px;
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+    border-radius: 20px;
+    transform: none;
+}
+
+/* اتجاه زر الإغلاق في العربية */
+html[dir="rtl"] .actualite-modal-close {
+    right: auto;
+    left: 18px;
+}
+/* توحيد أزرار جميع الأخبار */
+.actualite-more-btn,
+.e2c-more-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #1565C0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.actualite-more-btn:hover,
+.e2c-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-2px);
+}
+/* توحيد ارتفاع بطاقات الأخبار */
+.actualite-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.actualite-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* تثبيت الأزرار أسفل البطاقات */
+.actualite-more-btn,
+.e2c-more-btn {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* =========================================
+   AMELIORATION DES FENETRES ACTUALITES
+========================================= */
+
+/* Fenêtre principale */
+.actualite-modal {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenu de la fenêtre */
+.actualite-modal-content {
+    width: 100%;
+    max-width: 950px;
+    max-height: 90vh;
+    padding: 35px 40px;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+
+/* Titre */
+.actualite-modal-content h2 {
+    color: #174b70;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 35px 30px;
+    font-weight: 700;
+}
+
+/* Galerie */
+.taboula-gallery {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    height: 460px;
+    background: #f1f5f9;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Images */
+.taboula-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Boutons précédent et suivant */
+.taboula-next,
+.taboula-prev,
+.e2c-next,
+.e2c-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #1252a0;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.taboula-next:hover,
+.taboula-prev:hover,
+.e2c-next:hover,
+.e2c-prev:hover {
+    background: #2196f3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.taboula-next,
+.e2c-next {
+    right: 18px;
+}
+
+.taboula-prev,
+.e2c-prev {
+    left: 18px;
+}
+
+/* Points de navigation */
+.taboula-gallery-dots,
+.e2c-gallery-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 18px auto;
+}
+
+.taboula-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.taboula-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: #1565c0;
+}
+
+/* Bouton fermer */
+.actualite-modal-close {
+    position: sticky;
+    top: 0;
+    float: right;
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #dbeafe;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #1252a0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.actualite-modal-close:hover {
+    background: #1252a0;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Texte du contenu */
+.actualite-modal-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #444;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* =========================================
+   RESPONSIVE - TELEPHONE ET TABLETTE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .actualite-modal {
+        padding: 10px;
+    }
+
+    .actualite-modal-content {
+        padding: 22px 15px;
+        max-height: 94vh;
+        border-radius: 16px;
+    }
+
+    .actualite-modal-content h2 {
+        font-size: 21px;
+        line-height: 1.6;
+        margin: 10px 5px 22px;
+    }
+
+    .taboula-gallery {
+        height: 330px;
+        min-height: 250px;
+    }
+
+    .taboula-gallery img {
+        max-height: 330px;
+    }
+
+    .taboula-next,
+    .taboula-prev,
+    .e2c-next,
+    .e2c-prev {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .actualite-modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .actualite-modal-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
 }
