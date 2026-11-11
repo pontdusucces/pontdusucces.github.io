@@ -5434,3 +5434,13 @@ html[dir="rtl"] .actualite-modal-close {
         line-height: 1.8;
     }
 }
+
+/* Correction affichage des modales */
+.actualite-modal {
+    display: none;
+}
+
+.actualite-modal.active {
+    display: flex;
+}
+
