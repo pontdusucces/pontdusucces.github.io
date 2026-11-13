@@ -5283,11 +5283,14 @@ html[dir="rtl"] .actualite-modal-close {
     border-radius: 12px;
 }
 
+
 /* Boutons précédent et suivant */
 .taboula-next,
 .taboula-prev,
 .e2c-next,
-.e2c-prev {
+.e2c-prev,
+.partenariat-next,
+.partenariat-prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -5308,20 +5311,25 @@ html[dir="rtl"] .actualite-modal-close {
 .taboula-next:hover,
 .taboula-prev:hover,
 .e2c-next:hover,
-.e2c-prev:hover {
+.e2c-prev:hover,
+.partenariat-next:hover,
+.partenariat-prev:hover {
     background: #2196f3;
     transform: translateY(-50%) scale(1.1);
 }
 
 .taboula-next,
-.e2c-next {
+.e2c-next,
+.partenariat-next {
     right: 18px;
 }
 
 .taboula-prev,
-.e2c-prev {
+.e2c-prev,
+.partenariat-prev {
     left: 18px;
 }
+
 
 /* Points de navigation */
 .taboula-gallery-dots,
@@ -5414,10 +5422,12 @@ html[dir="rtl"] .actualite-modal-close {
         max-height: 330px;
     }
 
-    .taboula-next,
-    .taboula-prev,
-    .e2c-next,
-    .e2c-prev {
+   .taboula-next,
+.taboula-prev,
+.e2c-next,
+.e2c-prev,
+.partenariat-next,
+.partenariat-prev {
         width: 40px;
         height: 40px;
         font-size: 21px;
@@ -5443,4 +5453,101 @@ html[dir="rtl"] .actualite-modal-close {
 .actualite-modal.active {
     display: flex;
 }
+
+/* =========================================
+   ACTUALITE 3 - MEME DESIGN QUE LES AUTRES
+========================================= */
+
+.actualite-more-btn,
+.e2c-more-btn,
+.partenariat-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #1565C0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actualite-more-btn:hover,
+.e2c-more-btn:hover,
+.partenariat-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-2px);
+}
+
+/* تثبيت الأزرار أسفل البطاقات */
+.actualite-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.actualite-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.actualite-more-btn,
+.e2c-more-btn,
+.partenariat-more-btn {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* Alignement arabe */
+html[dir="rtl"] .partenariat-more-btn {
+    align-self: flex-end;
+}
+
+/* توحيد تصميم جميع بطاقات الأخبار */
+
+#actualites .actualites-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 360px));
+    gap: 24px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#actualites .actualite-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#actualites .actualite-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+#actualites .actualite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #actualites .actualites-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
 

@@ -27,21 +27,18 @@ function setLanguage(language) {
    ACTUALITES - TRADUCTION DES BOUTONS
 ========================================= */
 
+
 function updateActualiteMoreButtons() {
     const language = document.documentElement.lang || "fr";
+    const moreText = language === "ar" ? "اقرأ المزيد" : "Lire la suite";
 
-    document.querySelectorAll(".actualite-more-btn").forEach(function (button) {
-        const text = language === "ar"
-            ? (button.getAttribute("data-ar-more") || "اقرأ المزيد")
-            : (button.getAttribute("data-fr-more") || "Lire la suite");
-
-        button.textContent = text;
-    });
-
-    document.querySelectorAll(".e2c-more-btn").forEach(function (button) {
-        button.textContent = language === "ar" ? "اقرأ المزيد" : "Lire la suite";
+    document.querySelectorAll(
+        ".actualite-more-btn, .e2c-more-btn, .partenariat-more-btn"
+    ).forEach(function (button) {
+        button.textContent = moreText;
     });
 }
+
 
 
 /* =========================================
@@ -407,9 +404,122 @@ document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
         closeTaboulaModal();
         closeE2CModal();
+        closePartenariatModal();
     }
 });
 
+
+/* =========================================
+   ACTUALITE 3 - PARTENARIAT
+========================================= */
+
+const partenariatModal = document.getElementById("partenariat-modal");
+const partenariatImage = document.getElementById("partenariat-gallery-image");
+
+const partenariatImages = [
+    "images/partenariat-cooperation-1.jpeg",
+    "images/partenariat-cooperation-2.jpeg",
+    "images/partenariat-cooperation-3.jpeg",
+    "images/partenariat-cooperation-4.jpeg",
+    "images/partenariat-cooperation-5.jpeg",
+    "images/partenariat-cooperation-6.jpeg"
+];
+let partenariatCurrentImage = 0;
+
+// Ouvrir la fenêtre partenariat
+document.querySelectorAll(".partenariat-more-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+        if (!partenariatModal) return;
+
+        partenariatModal.classList.add("active");
+        partenariatModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        partenariatCurrentImage = 0;
+        showPartenariatImage();
+    });
+});
+
+// Afficher les images
+function showPartenariatImage() {
+    if (!partenariatImage) return;
+
+    partenariatImage.src = partenariatImages[partenariatCurrentImage];
+
+    const dotsContainer = document.querySelector(".partenariat-gallery-dots");
+    if (!dotsContainer) return;
+
+    dotsContainer.innerHTML = "";
+
+    partenariatImages.forEach(function (image, index) {
+        const dot = document.createElement("button");
+
+        dot.type = "button";
+        dot.className = "taboula-dot";
+
+        if (index === partenariatCurrentImage) {
+            dot.classList.add("active");
+        }
+
+        dot.setAttribute("aria-label", "Image " + (index + 1));
+
+        dot.addEventListener("click", function () {
+            partenariatCurrentImage = index;
+            showPartenariatImage();
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+}
+
+// Image suivante
+const partenariatNext = document.querySelector(".partenariat-next");
+
+if (partenariatNext) {
+    partenariatNext.addEventListener("click", function () {
+        partenariatCurrentImage =
+            (partenariatCurrentImage + 1) % partenariatImages.length;
+
+        showPartenariatImage();
+    });
+}
+
+// Image précédente
+const partenariatPrev = document.querySelector(".partenariat-prev");
+
+if (partenariatPrev) {
+    partenariatPrev.addEventListener("click", function () {
+        partenariatCurrentImage =
+            (partenariatCurrentImage - 1 + partenariatImages.length) %
+            partenariatImages.length;
+
+        showPartenariatImage();
+    });
+}
+
+// Fermer la fenêtre partenariat
+function closePartenariatModal() {
+    if (!partenariatModal) return;
+
+    partenariatModal.classList.remove("active");
+    partenariatModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+if (partenariatModal) {
+    const partenariatCloseButton =
+        partenariatModal.querySelector(".actualite-modal-close");
+
+    if (partenariatCloseButton) {
+        partenariatCloseButton.addEventListener("click", closePartenariatModal);
+    }
+
+    partenariatModal.addEventListener("click", function (event) {
+        if (event.target === partenariatModal) {
+            closePartenariatModal();
+        }
+    });
+}
 
 /* =========================================
    INITIALISATION
