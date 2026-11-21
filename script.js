@@ -33,7 +33,7 @@ function updateActualiteMoreButtons() {
     const moreText = language === "ar" ? "اقرأ المزيد" : "Lire la suite";
 
     document.querySelectorAll(
-        ".actualite-more-btn, .e2c-more-btn, .partenariat-more-btn"
+        ".actualite-more-btn, .e2c-more-btn, .partenariat-more-btn, .oim-more-btn"
     ).forEach(function (button) {
         button.textContent = moreText;
     });
@@ -405,7 +405,9 @@ document.addEventListener("keydown", function (event) {
         closeTaboulaModal();
         closeE2CModal();
         closePartenariatModal();
+        closeOimModal();
     }
+
 });
 
 
@@ -521,9 +523,208 @@ if (partenariatModal) {
     });
 }
 
+
+/* =========================================
+   ACTUALITE 4 - VISITE OIM
+========================================= */
+
+const oimModal = document.getElementById("oim-modal");
+const oimImage = document.getElementById("oim-gallery-image");
+
+const oimImages = [
+    "images/oim-visite-1.jpeg",
+    "images/oim-visite-2.jpeg",
+    "images/oim-visite-3.jpeg"
+];
+
+let oimCurrentImage = 0;
+
+// Ouvrir la fenêtre OIM
+document.querySelectorAll(".oim-more-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+        if (!oimModal) return;
+
+        oimModal.classList.add("active");
+        oimModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        oimCurrentImage = 0;
+        showOimImage();
+    });
+});
+
+// Afficher les images
+function showOimImage() {
+    if (!oimImage) return;
+
+    oimImage.src = oimImages[oimCurrentImage];
+
+    const dotsContainer =
+        document.querySelector(".oim-gallery-dots");
+
+    if (!dotsContainer) return;
+
+    dotsContainer.innerHTML = "";
+
+    oimImages.forEach(function (image, index) {
+        const dot = document.createElement("button");
+
+        dot.type = "button";
+        dot.className = "taboula-dot";
+
+        if (index === oimCurrentImage) {
+            dot.classList.add("active");
+        }
+
+        dot.setAttribute("aria-label", "Image " + (index + 1));
+
+        dot.addEventListener("click", function () {
+            oimCurrentImage = index;
+            showOimImage();
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+}
+
+// Image suivante
+const oimNext = document.querySelector(".oim-next");
+
+if (oimNext) {
+    oimNext.addEventListener("click", function () {
+        oimCurrentImage =
+            (oimCurrentImage + 1) % oimImages.length;
+
+        showOimImage();
+    });
+}
+
+// Image précédente
+const oimPrev = document.querySelector(".oim-prev");
+
+if (oimPrev) {
+    oimPrev.addEventListener("click", function () {
+        oimCurrentImage =
+            (oimCurrentImage - 1 + oimImages.length) %
+            oimImages.length;
+
+        showOimImage();
+    });
+}
+
+// Fermer la fenêtre OIM
+function closeOimModal() {
+    if (!oimModal) return;
+
+    oimModal.classList.remove("active");
+    oimModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+if (oimModal) {
+    const oimCloseButton =
+        oimModal.querySelector(".actualite-modal-close");
+
+    if (oimCloseButton) {
+        oimCloseButton.addEventListener("click", closeOimModal);
+    }
+
+    oimModal.addEventListener("click", function (event) {
+        if (event.target === oimModal) {
+            closeOimModal();
+        }
+    });
+}
+
+
 /* =========================================
    INITIALISATION
 ========================================= */
 
 // Langue par défaut
 setLanguage("fr");
+
+
+/* =========================================
+   ACTUALITES - NEWS MARQUEE
+========================================= */
+
+const newsContainer = document.querySelector(
+    "#actualites .actualites-container"
+);
+
+if (newsContainer && !newsContainer.dataset.marqueeReady) {
+
+    const originalCards = Array.from(newsContainer.children)
+        .filter(card => card.classList.contains("actualite-card"));
+
+    if (originalCards.length > 1) {
+
+        // تكرار البطاقات لضمان استمرار الحركة
+        originalCards.forEach(function (card) {
+            const clone = card.cloneNode(true);
+            clone.dataset.newsClone = "true";
+            newsContainer.appendChild(clone);
+        });
+
+        newsContainer.dataset.marqueeReady = "true";
+        newsContainer.classList.add("actualites-track");
+
+        // إنشاء إطار الشريط المتحرك
+        const marquee = document.createElement("div");
+        marquee.className = "actualites-marquee";
+
+        newsContainer.parentNode.insertBefore(
+            marquee,
+            newsContainer
+        );
+
+        marquee.appendChild(newsContainer);
+
+        // تشغيل أزرار البطاقات المكررة
+        newsContainer.addEventListener("click", function (event) {
+
+            const button = event.target.closest("button");
+
+            if (!button || !button.closest("[data-news-clone='true']")) {
+                return;
+            }
+
+            let modal = null;
+            let showImages = null;
+
+            if (button.classList.contains("actualite-more-btn")) {
+                modal = taboulaModal;
+                showImages = function () {
+                    taboulaCurrentImage = 0;
+                    showTaboulaImage();
+                };
+            } else if (button.classList.contains("e2c-more-btn")) {
+                modal = e2cModal;
+                showImages = function () {
+                    e2cCurrentImage = 0;
+                    showE2CImage();
+                };
+            } else if (button.classList.contains("partenariat-more-btn")) {
+                modal = partenariatModal;
+                showImages = function () {
+                    partenariatCurrentImage = 0;
+                    showPartenariatImage();
+                };
+            } else if (button.classList.contains("oim-more-btn")) {
+                modal = oimModal;
+                showImages = function () {
+                    oimCurrentImage = 0;
+                    showOimImage();
+                };
+            }
+
+            if (modal) {
+                modal.classList.add("active");
+                modal.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+                if (showImages) showImages();
+            }
+        });
+    }
+}

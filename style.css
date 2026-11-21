@@ -5853,7 +5853,341 @@ html[dir="rtl"] .partenariat-more-btn {
 }
 
 
+/* =========================================
+   OIM MODAL - SAME DESIGN AS OTHER NEWS
+========================================= */
 
+/* Gallery */
+#oim-modal .taboula-gallery {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Gallery image */
+#oim-modal .taboula-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Blue navigation arrows */
+#oim-modal .oim-prev,
+#oim-modal .oim-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    background: rgba(11,61,145,0.88);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+    transition: all 0.3s ease;
+}
+
+#oim-modal .oim-prev {
+    left: 18px;
+}
+
+#oim-modal .oim-next {
+    right: 18px;
+}
+
+#oim-modal .oim-prev:hover,
+#oim-modal .oim-next:hover {
+    background: #42A5F5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Image navigation dots */
+#oim-modal .oim-gallery-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 18px auto 25px;
+}
+
+#oim-modal .oim-gallery-dots .taboula-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#oim-modal .oim-gallery-dots .taboula-dot:hover {
+    background: #42A5F5;
+    transform: scale(1.2);
+}
+
+#oim-modal .oim-gallery-dots .taboula-dot.active {
+    width: 28px;
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+    border-radius: 10px;
+}
+
+/* OIM card button - same style */
+.oim-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #1565C0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.oim-more-btn:hover {
+    background: #0B3D91;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #oim-modal .taboula-gallery {
+        height: 330px;
+        min-height: 250px;
+    }
+
+    #oim-modal .taboula-gallery img {
+        max-height: 330px;
+    }
+
+    #oim-modal .oim-prev,
+    #oim-modal .oim-next {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+}
+
+/* OIM - Titre identique aux autres actualités */
+
+#oim-modal .actualite-modal-content h2 {
+    position: relative;
+    color: #174b70;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 950px;
+    margin: 10px auto 65px;
+    padding: 0 35px 22px;
+}
+
+/* Soulignement bleu sous le titre */
+#oim-modal .actualite-modal-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #174b91, #42a5f5);
+}
+
+/* Bouton fermer */
+#oim-modal .actualite-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    float: none;
+    z-index: 30;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #oim-modal .actualite-modal-content h2 {
+        font-size: 23px;
+        line-height: 1.6;
+        margin: 35px auto 40px;
+        padding: 0 8px 18px;
+    }
+}
+
+/* Alignement du bouton Lire la suite - Actualité OIM */
+
+#actualites .actualite-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#actualites .actualite-card .actualite-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#actualites .actualite-card .oim-more-btn {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+
+
+/* =====================================
+   ACTUALITES - HORIZONTAL NEWS TICKER
+===================================== */
+
+#actualites {
+    overflow: hidden;
+}
+
+#actualites .actualites-container {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 25px;
+    overflow: visible;
+    direction: ltr;
+}
+
+#actualites .actualite-card {
+    flex: 0 0 360px;
+    width: 360px;
+    max-width: 360px;
+}
+
+#actualites .actualites-container:hover {
+    animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+    #actualites .actualite-card {
+        flex-basis: 300px;
+        width: 300px;
+    }
+}
+
+/* حركة شريط الأخبار */
+
+#actualites .actualites-marquee {
+    width: 100%;
+    overflow: hidden;
+    direction: ltr;
+}
+
+#actualites .actualites-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    max-width: none;
+    gap: 24px;
+    animation: actualitesTicker 35s linear infinite;
+}
+
+#actualites .actualite-card {
+    flex: 0 0 360px;
+    width: 360px;
+}
+
+#actualites .actualites-marquee:hover .actualites-track {
+    animation-play-state: paused;
+}
+
+@keyframes actualitesTicker {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+    #actualites .actualite-card {
+        flex-basis: 300px;
+        width: 300px;
+    }
+
+    #actualites .actualites-track {
+        animation-duration: 28s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #actualites .actualites-track {
+        animation: none;
+    }
+}
+
+/* =====================================
+   UNIFORM HEIGHT - NEWS CARDS
+===================================== */
+
+/* جعل جميع البطاقات بنفس الارتفاع */
+#actualites .actualites-track {
+    align-items: stretch !important;
+}
+
+#actualites .actualite-card {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    height: auto !important;
+    min-height: 560px;
+}
+
+/* تثبيت ارتفاع الصور */
+#actualites .actualite-card .actualite-image {
+    flex: 0 0 240px;
+    height: 240px;
+}
+
+/* جعل المحتوى يملأ المساحة المتبقية */
+#actualites .actualite-card .actualite-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* تثبيت زر Lire la suite في الأسفل */
+#actualites .actualite-card .actualite-content button {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* الهاتف */
+@media (max-width: 600px) {
+    #actualites .actualite-card {
+        min-height: 560px;
+    }
+}
 
 
 
