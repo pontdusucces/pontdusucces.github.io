@@ -6116,8 +6116,11 @@ html[dir="rtl"] .partenariat-more-btn {
     width: 360px;
 }
 
-#actualites .actualites-marquee:hover .actualites-track {
-    animation-play-state: paused;
+/* إيقاف الحركة عند تمرير الفأرة على الحاسوب فقط */
+@media (hover: hover) and (pointer: fine) {
+    #actualites .actualites-marquee:hover .actualites-track {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes actualitesTicker {
@@ -6140,9 +6143,10 @@ html[dir="rtl"] .partenariat-more-btn {
     }
 }
 
+/* ضمان استمرار حركة الأخبار على الهاتف */
 @media (prefers-reduced-motion: reduce) {
     #actualites .actualites-track {
-        animation: none;
+        animation: actualitesTicker 35s linear infinite !important;
     }
 }
 
@@ -6189,5 +6193,33 @@ html[dir="rtl"] .partenariat-more-btn {
     }
 }
 
+/* =====================================
+   MOBILE NEWS ANIMATION FIX
+===================================== */
 
+@media (max-width: 768px) {
+
+    #actualites {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #actualites .actualites-marquee {
+        width: 100%;
+        overflow: hidden;
+        touch-action: pan-y;
+    }
+
+    #actualites .actualites-track {
+        animation: actualitesTicker 35s linear infinite !important;
+        animation-play-state: running !important;
+        will-change: transform;
+    }
+
+    #actualites .actualite-card {
+        flex: 0 0 300px;
+        width: 300px;
+        max-width: 300px;
+    }
+}
 
