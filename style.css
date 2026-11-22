@@ -10,11 +10,27 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #eaf4ff 0%, #d6eaff 45%, #b9d8f5 100%);
+    background: #eaf4ff;
     color: #17324d;
 }
+
+/* خلفية صفحة Formation & Insertion فقط */
+
+body.formation-page {
+    background-image:
+        linear-gradient(rgba(220, 238, 255, 0.12), rgba(190, 220, 250, 0.18)),
+        url("./images/formation-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #d6eaff;
+}
+
 
 
 /* ===== HEADER ===== */
@@ -6223,3 +6239,1138 @@ html[dir="rtl"] .partenariat-more-btn {
     }
 }
 
+
+/* ===== خلفية قسم مشاريعنا ===== */
+
+#projets {
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(5, 35, 75, 0.68),
+            rgba(5, 35, 75, 0.68)
+        ),
+        url("images/projets-bg.png") center center / cover no-repeat;
+}
+
+/* عنوان ووصف المشاريع */
+#projets h2 {
+    color: #ffffff;
+}
+
+#projets .projets-intro {
+    color: #ffffff;
+}
+
+/* الحفاظ على وضوح البطاقات */
+#projets .projet-card {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+
+/* =====================================
+   PROJECT CARDS - HOVER ANIMATION
+===================================== */
+
+#projets .projet-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+/* تأثير عند تمرير الفأرة */
+#projets .projet-card:hover {
+    transform: translateY(-12px) scale(1.025);
+    box-shadow: 0 18px 40px rgba(0, 45, 110, 0.25);
+    border-color: #42a5f5;
+}
+
+/* تأثير على عنوان المشروع */
+#projets .projet-card h3 {
+    transition: color 0.3s ease;
+}
+
+#projets .projet-card:hover h3 {
+    color: #1976d2;
+}
+
+/* تأثير على الخط الأزرق */
+#projets .projet-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+#projets .projet-card:hover::after {
+    width: 65%;
+}
+
+/* دعم الهاتف */
+@media (hover: none) {
+    #projets .projet-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* احترام إعدادات تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    #projets .projet-card,
+    #projets .projet-card h3,
+    #projets .projet-card::after {
+        transition: none;
+    }
+}
+/* Activité cards - clickable */
+#activites .activite-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#activites .activite-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(11, 61, 145, 0.18);
+}
+
+/* تأثير قلب بطاقة النشاط */
+.flip-card {
+    perspective: 1000px;
+    background: transparent;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: inherit;
+}
+
+
+    /* نحافظ على محتوى الوجه الأمامي */
+
+
+.flip-card-back {
+    background: linear-gradient(135deg, #0878b9, #034b7c);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-link {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.more-link:hover {
+    background: white;
+    color: #0878b9;
+}
+
+/* إصلاح أبعاد بطاقة القلب */
+.flip-card {
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.flip-card-inner {
+    height: auto;
+    min-height: 0;
+}
+
+.flip-card-front {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+}
+
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+}
+
+/* ===== Formation & Insertion Page ===== */
+
+.formation-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    background: white;
+    text-align: center;
+}
+
+.formation-header img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.formation-header h1 {
+    color: #075b91;
+    font-size: 25px;
+    margin: 0 0 8px;
+}
+
+.formation-header p {
+    color: #555;
+    margin: 0;
+}
+
+.formation-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 20px 50px;
+}
+
+.formation-banner {
+    min-height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0878b9, #034b7c);
+    color: white;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.formation-banner h2 {
+    font-size: 29px;
+    margin: 0;
+}
+
+.formation-banner h2 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.formation-intro {
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 25px 20px;
+}
+
+.formation-intro h2 {
+    color: #075b91;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.formation-intro p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.formation-activity {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.formation-activity h2 {
+    color: #075b91;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formation-text p {
+    color: #444;
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.formation-home {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    background: #0878b9;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.formation-home:hover {
+    background: #034b7c;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .formation-header {
+        flex-direction: column;
+    }
+
+    .formation-header h1 {
+        font-size: 20px;
+    }
+
+    .formation-banner {
+        min-height: 140px;
+    }
+
+    .formation-banner h2 {
+        font-size: 26px;
+    }
+
+    .formation-activity {
+        padding: 20px 15px;
+    }
+}
+
+/* Petite carte Formation & Insertion */
+
+.formation-activity {
+    max-width: 520px;
+    margin: 35px auto;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+}
+
+.formation-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.formation-gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.formation-card-content {
+    padding: 18px 22px 24px;
+}
+
+/* Titre de la carte activité */
+.formation-card-content h2 {
+    font-size: 21px;
+    color: #075b91;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 18px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.formation-card-content h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, #0878b9, #42a5f5);
+    border-radius: 5px;
+}
+
+.formation-card-content p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+
+.dialogue-details {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 850px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.dialogue-details h2 {
+    color: #075b91;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dialogue-details .formation-text p {
+    color: #444;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    .dialogue-details {
+        width: 90%;
+        padding: 20px;
+        max-height: 85vh;
+    }
+}
+
+
+.dialogue-details h2 {
+    color: #075b91;
+    text-align: center;
+}
+
+/* صور بطاقة النشاط */
+.formation-gallery img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.formation-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* نافذة معرض الصور */
+.dialogue-gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.93);
+    align-items: center;
+    justify-content: center;
+}
+
+.dialogue-gallery-modal.active {
+    display: flex;
+}
+
+.dialogue-gallery-modal img {
+    max-width: 80%;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.dialogue-gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.dialogue-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.dialogue-gallery-arrow:hover {
+    background: #0878b9;
+}
+
+.dialogue-gallery-arrow.prev {
+    left: 25px;
+}
+
+.dialogue-gallery-arrow.next {
+    right: 25px;
+}
+
+#dialogue-image-counter {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .dialogue-gallery-modal img {
+        max-width: 92%;
+        max-height: 75vh;
+    }
+
+    .dialogue-gallery-arrow.prev {
+        left: 8px;
+    }
+
+    .dialogue-gallery-arrow.next {
+        right: 8px;
+    }
+}
+/* Bouton Lire la suite - Bleu */
+
+/* Bouton Lire la suite - bleu arrondi */
+.formation-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    height: 63px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 50px;
+    background: #0878b9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(8, 120, 185, 0.2);
+}
+
+.formation-more:hover {
+    background: #034b7c;
+    transform: translateY(-2px);
+}
+
+.formation-more .arrow-icon {
+    display: none;
+}
+
+/* Bouton Lire la suite */
+.formation-card-content .formation-more {
+    display: block;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 9px 22px;
+    margin: 10px 0 10px auto;
+    background: #0878b9;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 100, 160, 0.15);
+    transition: 0.3s ease;
+}
+
+.formation-card-content .formation-more:hover {
+    background: #034b7c;
+    transform: translateY(-2px);
+}
+/* Petit bouton Fermer */
+.dialogue-details > .formation-more {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 10px 25px;
+    margin: 15px 0 0;
+    font-size: 14px;
+    border-radius: 25px;
+}
+/* Petit bouton Fermer */
+.dialogue-details > .formation-more {
+    display: block;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 8px 20px;
+    margin: 10px 0 10px auto;
+    background: #0878b9;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 100, 160, 0.15);
+}
+
+.dialogue-details > .formation-more:hover {
+    background: #034b7c;
+}
+/* Décoration du titre de la fenêtre */
+.dialogue-details h2 {
+    color: #0B3D91;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.dialogue-details h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, #0B3D91, #42A5F5);
+    border-radius: 10px;
+
+ }   
+/* ترتيب بطاقات الأنشطة في سطر واحد */
+.formation-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.formation-banner,
+.formation-intro,
+.dialogue-details,
+.formation-home {
+    grid-column: 1 / -1;
+}
+
+.formation-activity {
+    width: 100%;
+    margin: 0;
+}
+
+/* على الهاتف: بطاقة واحدة في كل سطر */
+@media (max-width: 768px) {
+    .formation-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* معرض صور إدارة الذات */
+.gestion-gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.gestion-gallery-modal.active {
+    display: flex;
+}
+
+.gestion-gallery-modal img {
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.gestion-close,
+.gestion-arrow {
+    position: absolute;
+    border: none;
+    color: white;
+    background: #087dbb;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+}
+
+.gestion-close {
+    top: 25px;
+    right: 30px;
+}
+
+.gestion-arrow.prev {
+    left: 25px;
+}
+
+.gestion-arrow.next {
+    right: 25px;
+}
+
+#gestion-counter {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+/* توحيد ارتفاع بطاقات الأنشطة */
+.formation-activity {
+    height: 100%;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formation-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formation-card-content .formation-more {
+    margin-top: auto;
+    align-self: flex-end;
+}
+/* تحسين تصميم صفحة Formation & Insertion */
+
+.formation-container {
+    max-width: 1100px;
+    padding-top: 20px;
+    gap: 22px;
+}
+
+.formation-banner {
+    min-height: 120px;
+    margin-bottom: 0;
+    border-radius: 16px;
+}
+
+.formation-banner h2 {
+    font-size: 28px;
+}
+
+.formation-intro {
+    width: 85%;
+    justify-self: center;
+    margin-bottom: 0;
+    padding: 20px 25px;
+    border-radius: 18px;
+}
+
+.formation-intro h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.formation-intro p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .formation-intro {
+        width: 100%;
+    }
+
+    .formation-banner {
+        min-height: 100px;
+    }
+
+    .formation-banner h2 {
+        font-size: 23px;
+    }
+}
+/* خلفية خاصة بصفحة Formation & Insertion فقط */
+body.formation-page {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(220, 238, 255, 0.82),
+            rgba(190, 220, 250, 0.86)
+        ),
+        url("images/formation-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #17324d;
+}
+
+/* ===== توحيد تصميم معارض الصور ===== */
+
+.dialogue-gallery-modal,
+.gestion-gallery-modal {
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.dialogue-gallery-modal img,
+.gestion-gallery-modal img {
+    max-width: 85%;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* زر الإغلاق */
+.dialogue-gallery-close,
+.gestion-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #087dbb;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* أزرار التنقل */
+.dialogue-gallery-arrow,
+.gestion-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #087dbb;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.dialogue-gallery-arrow:hover,
+.gestion-arrow:hover {
+    background: #075b91;
+}
+
+.dialogue-gallery-arrow.prev,
+.gestion-arrow.prev {
+    left: 25px;
+}
+
+.dialogue-gallery-arrow.next,
+.gestion-arrow.next {
+    right: 25px;
+}
+
+/* عداد الصور */
+#dialogue-image-counter,
+#gestion-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+}
+
+/* الهاتف */
+@media (max-width: 600px) {
+    .dialogue-gallery-modal img,
+    .gestion-gallery-modal img {
+        max-width: 90%;
+        max-height: 75vh;
+    }
+
+    .dialogue-gallery-arrow.prev,
+    .gestion-arrow.prev {
+        left: 8px;
+    }
+
+    .dialogue-gallery-arrow.next,
+    .gestion-arrow.next {
+        right: 8px;
+    }
+
+    .dialogue-gallery-close,
+    .gestion-close {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+/* =========================================
+   MOBILE OPTIMIZATION - FORMATION
+========================================= */
+
+/* بطاقة Formation & Insertion في الصفحة الرئيسية */
+@media (max-width: 768px) {
+
+    #activites .activite-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    #activites .activite-image {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    #activites .activite-content {
+        padding: 16px 8px 8px;
+    }
+
+    #activites .activite-card h3 {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    #activites .activite-card p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    #activites .activite-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* صفحة Formation & Insertion */
+@media (max-width: 768px) {
+
+    body.formation-page {
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .formation-header {
+        width: 100%;
+        padding: 14px 12px;
+        gap: 8px;
+    }
+
+    .formation-header img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .formation-header h1 {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .formation-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .formation-container {
+        width: 100%;
+        padding: 15px 12px 35px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .formation-banner {
+        width: 100%;
+        min-height: 105px;
+        padding: 18px 12px;
+        border-radius: 14px;
+    }
+
+    .formation-banner h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .formation-intro {
+        width: 100%;
+        padding: 18px 14px;
+    }
+
+    .formation-intro h2 {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .formation-intro p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    /* بطاقات الأنشطة */
+    .formation-activity {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        margin: 0;
+        border-radius: 15px;
+    }
+
+    .formation-card-content {
+        padding: 16px 14px 20px;
+    }
+
+    .formation-card-content h2 {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .formation-card-content p {
+        font-size: 14px;
+        line-height: 1.85;
+        text-align: start;
+    }
+
+    /* صور الأنشطة */
+    .formation-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .formation-gallery img {
+        width: 100%;
+        height: 155px;
+        object-fit: cover;
+    }
+
+    /* نافذة تفاصيل النشاط */
+    .dialogue-details {
+        width: calc(100% - 24px);
+        max-width: none;
+        max-height: 85dvh;
+        padding: 20px 15px;
+        border-radius: 14px;
+        overflow-y: auto;
+    }
+
+    .dialogue-details h2 {
+        font-size: 19px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .dialogue-details .formation-text p {
+        font-size: 14px;
+        line-height: 1.9;
+        text-align: start;
+    }
+
+    /* أزرار الصفحة */
+    .formation-more,
+    .formation-home {
+        max-width: 100%;
+        min-height: 44px;
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+
+    .formation-home {
+        margin: 20px auto 0;
+    }
+}
+
+/* الهواتف الصغيرة */
+@media (max-width: 480px) {
+
+    #activites .activite-image {
+        height: 185px;
+    }
+
+    .formation-header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .formation-header h1 {
+        font-size: 17px;
+    }
+
+    .formation-banner h2 {
+        font-size: 19px;
+    }
+
+    .formation-gallery img {
+        height: 125px;
+    }
+
+    .formation-card-content {
+        padding: 14px 12px 18px;
+    }
+
+    .formation-card-content h2 {
+        font-size: 17px;
+    }
+
+    .dialogue-gallery-modal img,
+    .gestion-gallery-modal img {
+        max-width: 94%;
+        max-height: 72dvh;
+    }
+
+    .dialogue-gallery-arrow,
+    .gestion-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .dialogue-gallery-arrow.prev,
+    .gestion-arrow.prev {
+        left: 5px;
+    }
+
+    .dialogue-gallery-arrow.next,
+    .gestion-arrow.next {
+        right: 5px;
+    }
+}
+
+/* دعم اللمس وتقليل الحركة */
+@media (hover: none) {
+
+    #activites .activite-card:hover {
+        transform: none;
+    }
+
+    .formation-gallery img:hover {
+        transform: none;
+    }
+}

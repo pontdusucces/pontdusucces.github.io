@@ -5,7 +5,7 @@
 
 function setLanguage(language) {
     const selectedLanguage = language === "ar" ? "ar" : "fr";
-
+    localStorage.setItem("siteLanguage", selectedLanguage);
     document.querySelectorAll("[data-fr][data-ar]").forEach(function (element) {
         const translatedText = element.getAttribute(
             selectedLanguage === "ar" ? "data-ar" : "data-fr"
@@ -18,7 +18,19 @@ function setLanguage(language) {
 
     document.documentElement.lang = selectedLanguage;
     document.documentElement.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+const isFormationPage = window.location.pathname
+    .toLowerCase()
+    .endsWith("formation-insertion.html");
 
+if (isFormationPage) {
+    document.title = language === "ar"
+        ? "التكوين والإدماج | جمعية جسر النجاح"
+        : "Formation & Insertion | Association Pont du Succès";
+} else {
+    document.title = language === "ar"
+        ? "جمعية جسر النجاح | تطوان"
+        : "Association Pont du Succès | Tétouan";
+}
     updateActualiteMoreButtons();
 }
 
@@ -641,8 +653,9 @@ if (oimModal) {
    INITIALISATION
 ========================================= */
 
-// Langue par défaut
-setLanguage("fr");
+// Restaurer la dernière langue choisie
+const savedLanguage = localStorage.getItem("siteLanguage") || "fr";
+setLanguage(savedLanguage);
 
 
 /* =========================================

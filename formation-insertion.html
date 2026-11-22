@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation & Insertion | Tétouan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="formation-page">
+    <header class="formation-header">
+        <img src="images/logo.png" alt="Logo de l'association">
+        <div>
+    <h1 data-fr="Association Pont du Succès"
+        data-ar="جمعية جسر النجاح">
+        Association Pont du Succès
+    </h1>
+
+    <p data-fr="Pour l'Éducation et le Développement Durable"
+       data-ar="للتربية والتنمية المستدامة">
+        Pour l'Éducation et le Développement Durable
+    </p>
+</div>
+    </header>
+
+    <main class="formation-container">
+
+        <div class="formation-banner">
+    <h2 data-fr="Formation & Insertion"
+        data-ar="التكوين والإدماج">
+        Formation & Insertion
+    </h2>
+</div>
+
+      <section class="formation-intro">
+
+    <h2 data-fr="Nos activités de formation et d'accompagnement"
+        data-ar="أنشطتنا في مجال التكوين والمواكبة">
+        Nos activités de formation et d'accompagnement
+    </h2>
+
+    <p data-fr="Découvrez nos actions de formation, d'accompagnement psychosocial et d'insertion au profit des jeunes."
+       data-ar="اكتشفوا مبادراتنا في مجال التكوين والدعم النفسي والاجتماعي والإدماج لفائدة الشباب.">
+        Découvrez nos actions de formation, d'accompagnement
+        psychosocial et d'insertion au profit des jeunes.
+    </p>
+
+</section>
+
+<article class="formation-activity">
+
+   
+<div class="formation-gallery">
+    <img src="images/dialogue-1.jpeg"
+         alt="Atelier de dialogue positif"
+         onclick="openDialogueGallery(0)">
+
+    <img src="images/dialogue-2.jpeg"
+         alt="Activité collective avec les bénéficiaires"
+         onclick="openDialogueGallery(1)">
+</div>
+
+<!-- معرض الصور المكبر -->
+<div id="dialogue-gallery-modal" class="dialogue-gallery-modal">
+
+    <button class="dialogue-gallery-close"
+            onclick="closeDialogueGallery()">×</button>
+
+    <button class="dialogue-gallery-arrow prev"
+            onclick="changeDialogueImage(-1)">&#10094;</button>
+
+    <img id="dialogue-large-image"
+         src="images/dialogue-1.jpeg"
+         alt="Photo de l'activité">
+
+    <button class="dialogue-gallery-arrow next"
+            onclick="changeDialogueImage(1)">&#10095;</button>
+
+    <div id="dialogue-image-counter">1 / 2</div>
+
+</div>
+
+
+    <div class="formation-card-content">
+
+        <h2 data-fr="Dialogue positif et bonne communication"
+            data-ar="الحوار الإيجابي والتواصل الجيد">
+            Dialogue positif et bonne communication
+        </h2>
+
+        <p data-fr="Une séance de soutien psychosocial avec les bénéficiaires du Centre Taboula de la Deuxième Chance – Nouvelle Génération."
+           data-ar="حصة للدعم النفسي والاجتماعي مع مستفيدي مركز طابولة الفرصة الثانية – الجيل الجديد.">
+            Une séance de soutien psychosocial avec les bénéficiaires du Centre Taboula de la Deuxième Chance – Nouvelle Génération.
+        </p>
+
+      
+<button class="formation-more"
+        onclick="document.getElementById('details-dialogue').style.display='block'"
+        data-fr="Lire la suite"
+        data-ar="اقرأ المزيد">
+    Lire la suite
+</button>
+
+
+    </div>
+
+</article>
+
+<div id="details-dialogue" class="dialogue-details">
+
+    <h2 data-fr="Dialogue positif et bonne communication"
+        data-ar="الحوار الإيجابي والتواصل الجيد">
+        Dialogue positif et bonne communication
+    </h2>
+
+
+<div class="formation-text">
+
+    
+<p data-fr="Dans le cadre des séances de soutien psychosocial, une activité a été organisée avec les bénéficiaires du Centre Taboula de la Deuxième Chance – Nouvelle Génération autour du dialogue positif et de la bonne communication. L'objectif était de renforcer leur capacité à communiquer calmement et avec respect, à écouter leur interlocuteur et à exprimer leurs opinions."
+   data-ar="في إطار حصص الدعم النفسي والاجتماعي، تم الاشتغال مع مستفيدي مركز طابولة الفرصة الثانية الجيل الجديد على موضوع الحوار الإيجابي والتواصل الجيد، بهدف تعزيز قدرتهم على التواصل مع الآخرين بهدوء واحترام، والاستماع إلى الطرف الآخر والتعبير عن آرائهم.">
+    Dans le cadre des séances de soutien psychosocial, une activité a été organisée avec les bénéficiaires du Centre Taboula de la Deuxième Chance – Nouvelle Génération autour du dialogue positif et de la bonne communication. L'objectif était de renforcer leur capacité à communiquer calmement et avec respect, à écouter leur interlocuteur et à exprimer leurs opinions.
+</p>
+
+<p data-fr="Les échanges ont également porté sur la manière de communiquer positivement avec l'administration de l'établissement, en présentant clairement et respectueusement les problèmes ou les demandes, en écoutant l'interlocuteur et en essayant de trouver des solutions appropriées."
+   data-ar="كما تم التطرق إلى كيفية التواصل الإيجابي مع إدارة المؤسسة، من خلال طرح المشاكل أو الطلبات بوضوح واحترام، والاستماع إلى الطرف الآخر، ومحاولة الوصول إلى حلول مناسبة.">
+    Les échanges ont également porté sur la manière de communiquer positivement avec l'administration de l'établissement, en présentant clairement et respectueusement les problèmes ou les demandes, en écoutant l'interlocuteur et en essayant de trouver des solutions appropriées.
+</p>
+
+<p data-fr="Ensuite, une activité collective a été organisée en groupes. Les élèves ont dessiné ou représenté des situations mettant en évidence l'importance du dialogue positif, comme résoudre les désaccords calmement, écouter les opinions des autres et coopérer pour parvenir à une solution appropriée."
+   data-ar="بعد ذلك، تم تنظيم نشاط جماعي على شكل مجموعات، حيث قام التلاميذ برسم أو تمثيل مواقف تُبرز أهمية الحوار الإيجابي، مثل حل الخلافات بهدوء والاستماع إلى آراء الآخرين والتعاون للوصول إلى حل مناسب.">
+    Ensuite, une activité collective a été organisée en groupes. Les élèves ont dessiné ou représenté des situations mettant en évidence l'importance du dialogue positif, comme résoudre les désaccords calmement, écouter les opinions des autres et coopérer pour parvenir à une solution appropriée.
+</p>
+
+<p data-fr="Enfin, il a été souligné que le dialogue positif repose sur le respect des différences, une écoute attentive, l'expression calme de son opinion et la recherche de solutions appropriées."
+   data-ar="وفي الأخير، تم التأكيد على أن الحوار الإيجابي يقوم على احترام الاختلاف، وحسن الاستماع، والتعبير عن الرأي بهدوء، والبحث عن حلول مناسبة.">
+    Enfin, il a été souligné que le dialogue positif repose sur le respect des différences, une écoute attentive, l'expression calme de son opinion et la recherche de solutions appropriées.
+</p>
+
+
+</div>
+
+
+    <button class="formation-more"
+            onclick="document.getElementById('details-dialogue').style.display='none'"
+            data-fr="Fermer"
+            data-ar="إغلاق">
+        Fermer
+    </button>
+
+</div>
+<article class="formation-activity">
+<!-- ACTIVITÉ 2 : GESTION DE SOI -->
+
+<div class="formation-gallery">
+
+    <img src="images/gestion-soi-1.jpeg"
+         alt="Séance de gestion de soi"
+         onclick="openGestionGallery(0)">
+
+    <img src="images/gestion-soi-2.jpeg"
+         alt="Activité de gestion de soi"
+         onclick="openGestionGallery(1)">
+
+</div>
+
+    <div class="formation-card-content">
+
+        <h2 data-fr="Les compétences de vie : la gestion de soi"
+            data-ar="المهارات الحياتية: إدارة الذات">
+            Les compétences de vie : la gestion de soi
+        </h2>
+
+        <p data-fr="Des séances de compétences de vie organisées au Centre Taboula de la Deuxième Chance – Nouvelle Génération, autour de la gestion de soi. Tous les apprenants ont bénéficié de cette expérience."
+           data-ar="صور حصص المهارات الحياتية بمركز طابولة الفرصة الثانية – الجيل الجديد، ضمن مهارة إدارة الذات، حيث استفاد جميع المتعلمين من هذه التجربة.">
+            Des séances de compétences de vie organisées au Centre Taboula de la Deuxième Chance – Nouvelle Génération, autour de la gestion de soi.
+        </p>
+
+        <button class="formation-more"
+                onclick="document.getElementById('details-gestion-soi').style.display='block'"
+                data-fr="Lire la suite"
+                data-ar="اقرأ المزيد">
+            Lire la suite
+        </button>
+
+    </div>
+</article>
+
+
+<!-- DÉTAILS DE L'ACTIVITÉ 2 -->
+
+<div id="details-gestion-soi" class="dialogue-details">
+
+    <h2 data-fr="Les compétences de vie : la gestion de soi"
+        data-ar="المهارات الحياتية: إدارة الذات">
+        Les compétences de vie : la gestion de soi
+    </h2>
+
+    <div class="formation-text">
+
+        <p data-fr="Des séances de compétences de vie ont été organisées au Centre Taboula de la Deuxième Chance – Nouvelle Génération, autour de la compétence de gestion de soi. Tous les apprenants ont bénéficié de cette expérience."
+           data-ar="في إطار حصص المهارات الحياتية، تم تنظيم أنشطة تربوية بمركز طابولة الفرصة الثانية – الجيل الجديد، تمحورت حول مهارة إدارة الذات، حيث استفاد جميع المتعلمين من هذه التجربة.">
+            Des séances de compétences de vie ont été organisées au Centre Taboula de la Deuxième Chance – Nouvelle Génération, autour de la compétence de gestion de soi. Tous les apprenants ont bénéficié de cette expérience.
+        </p>
+
+    </div>
+
+    <button class="formation-more"
+            onclick="document.getElementById('details-gestion-soi').style.display='none'"
+            data-fr="Fermer"
+            data-ar="إغلاق">
+        Fermer
+    </button>
+
+</div>
+<!-- Galerie agrandie : Gestion de soi -->
+<div id="gestion-gallery-modal" class="gestion-gallery-modal">
+
+    <button class="gestion-close"
+            onclick="closeGestionGallery()">×</button>
+
+    <button class="gestion-arrow prev"
+            onclick="changeGestionImage(-1)">❮</button>
+
+    <img id="gestion-large-image"
+         src="images/gestion-soi-1.jpeg"
+         alt="Photo de l'activité">
+
+    <button class="gestion-arrow next"
+            onclick="changeGestionImage(1)">❯</button>
+
+    <div id="gestion-counter">1 / 2</div>
+
+</div>
+
+        <a href="index.html" class="formation-home"
+           data-fr="Retour à l'accueil"
+           data-ar="العودة إلى الصفحة الرئيسية">
+            Retour à l'accueil
+        </a>
+
+    </main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const language = localStorage.getItem("siteLanguage") || "fr";
+
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-fr][data-ar]").forEach(function(element) {
+        const translatedText = element.getAttribute(
+            language === "ar" ? "data-ar" : "data-fr"
+        );
+
+        if (translatedText !== null && element.children.length === 0) {
+            element.textContent = translatedText;
+        }
+    });
+
+});
+</script>
+
+<script>
+const dialogueImages = [
+    "images/dialogue-1.jpeg",
+    "images/dialogue-2.jpeg"
+];
+
+let dialogueImageIndex = 0;
+
+function openDialogueGallery(index) {
+    dialogueImageIndex = index;
+    updateDialogueGallery();
+
+    document.getElementById("dialogue-gallery-modal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+function updateDialogueGallery() {
+    document.getElementById("dialogue-large-image").src =
+        dialogueImages[dialogueImageIndex];
+
+    document.getElementById("dialogue-image-counter").textContent =
+        (dialogueImageIndex + 1) + " / " + dialogueImages.length;
+}
+
+function changeDialogueImage(direction) {
+    dialogueImageIndex =
+        (dialogueImageIndex + direction + dialogueImages.length)
+        % dialogueImages.length;
+
+    updateDialogueGallery();
+}
+
+function closeDialogueGallery() {
+    document.getElementById("dialogue-gallery-modal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(event) {
+    const modal = document.getElementById("dialogue-gallery-modal");
+
+    if (!modal.classList.contains("active")) return;
+
+    if (event.key === "Escape") closeDialogueGallery();
+    if (event.key === "ArrowRight") changeDialogueImage(1);
+    if (event.key === "ArrowLeft") changeDialogueImage(-1);
+});
+</script>
+
+<script>
+const gestionImages = [
+    "images/gestion-soi-1.jpeg",
+    "images/gestion-soi-2.jpeg"
+];
+
+let gestionImageIndex = 0;
+
+function openGestionGallery(index) {
+    gestionImageIndex = index;
+    updateGestionGallery();
+
+    document.getElementById("gestion-gallery-modal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+function updateGestionGallery() {
+    document.getElementById("gestion-large-image").src =
+        gestionImages[gestionImageIndex];
+
+    document.getElementById("gestion-counter").textContent =
+        (gestionImageIndex + 1) + " / " + gestionImages.length;
+}
+
+function changeGestionImage(direction) {
+    gestionImageIndex =
+        (gestionImageIndex + direction + gestionImages.length)
+        % gestionImages.length;
+
+    updateGestionGallery();
+}
+
+function closeGestionGallery() {
+    document.getElementById("gestion-gallery-modal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(event) {
+    const modal = document.getElementById("gestion-gallery-modal");
+
+    if (!modal.classList.contains("active")) return;
+
+    if (event.key === "Escape") closeGestionGallery();
+    if (event.key === "ArrowRight") changeGestionImage(1);
+    if (event.key === "ArrowLeft") changeGestionImage(-1);
+});
+</script>
+</body>
+</html>
