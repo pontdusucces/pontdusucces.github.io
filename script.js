@@ -741,3 +741,62 @@ if (newsContainer && !newsContainer.dataset.marqueeReady) {
         });
     }
 }
+
+
+/* ===== ACTUALITE COORDINATION MOHAMED ABED ALJABRI ===== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const coordinationModal = document.getElementById("coordination-modal");
+    const coordinationButton = document.querySelector(".coordination-more-btn");
+
+    if (!coordinationModal || !coordinationButton) return;
+
+    const coordinationImages = [
+        "images/coordination-mohamed-abed-1.jpeg",
+        "images/coordination-mohamed-abed-2.jpeg"
+    ];
+
+    const coordinationImage = document.getElementById("coordination-gallery-image");
+    let coordinationIndex = 0;
+
+    function showCoordinationImage(index) {
+        coordinationIndex =
+            (index + coordinationImages.length) % coordinationImages.length;
+
+        coordinationImage.src = coordinationImages[coordinationIndex];
+    }
+
+    coordinationButton.addEventListener("click", function () {
+        coordinationModal.classList.add("active");
+        coordinationModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        showCoordinationImage(0);
+    });
+
+    coordinationModal.querySelector(".actualite-modal-close")
+        .addEventListener("click", closeCoordinationModal);
+
+    coordinationModal.querySelector(".coordination-prev")
+        .addEventListener("click", function () {
+            showCoordinationImage(coordinationIndex - 1);
+        });
+
+    coordinationModal.querySelector(".coordination-next")
+        .addEventListener("click", function () {
+            showCoordinationImage(coordinationIndex + 1);
+        });
+
+    coordinationModal.addEventListener("click", function (event) {
+        if (event.target === coordinationModal) {
+            closeCoordinationModal();
+        }
+    });
+
+    function closeCoordinationModal() {
+        coordinationModal.classList.remove("active");
+        coordinationModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+});

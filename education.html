@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Éducation | Association Pont du Succès</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Fenêtre des détails */
+        .dialogue-details.active {
+            display: block;
+        }
+
+        /* Galerie des photos */
+        .dialogue-gallery-modal.active {
+            display: flex;
+        }
+
+        #education-counter {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        /* Adaptation de la galerie */
+        .formation-gallery img {
+            cursor: zoom-in;
+        }
+
+        @media (max-width: 600px) {
+            .formation-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body class="formation-page">
+
+    <!-- HEADER -->
+    <header class="formation-header">
+
+        <img src="images/logo.png" alt="Logo de l'association">
+
+        <div>
+            <h1 data-fr="Association Pont du Succès"
+                data-ar="جمعية جسر النجاح">
+                Association Pont du Succès
+            </h1>
+
+            <p data-fr="Pour l'Éducation et le Développement Durable"
+               data-ar="للتربية والتنمية المستدامة">
+                Pour l'Éducation et le Développement Durable
+            </p>
+        </div>
+
+    </header>
+
+    <main class="formation-container">
+
+        <!-- BANNER -->
+        <div class="formation-banner">
+            <h2 data-fr="Éducation"
+                data-ar="التعليم">
+                Éducation
+            </h2>
+        </div>
+
+        <!-- INTRODUCTION -->
+        <section class="formation-intro">
+
+            <h2 data-fr="Nos activités éducatives"
+                data-ar="أنشطتنا التربوية">
+                Nos activités éducatives
+            </h2>
+
+            <p data-fr="Accompagnement éducatif, éducation non formelle, éducation préscolaire et apprentissage tout au long de la vie."
+               data-ar="المواكبة التربوية، والتربية غير النظامية، والتعليم الأولي، والتعلم مدى الحياة.">
+                Accompagnement éducatif, éducation non formelle,
+                éducation préscolaire et apprentissage tout au long de la vie.
+            </p>
+
+        </section>
+
+        <!-- CARTE ACTIVITÉ -->
+        <article class="formation-activity">
+
+            <!-- PHOTOS PRINCIPALES -->
+            <div class="formation-gallery">
+
+                <img src="images/education-mecanique-1.jpeg"
+                     alt="Atelier mécanique"
+                     onclick="openEducationGallery(0)">
+
+                <img src="images/education-mecanique-2.jpeg"
+                     alt="Formation pratique"
+                     onclick="openEducationGallery(1)">
+
+            </div>
+
+            <!-- CONTENU DE LA CARTE -->
+            <div class="formation-card-content">
+
+                <h2 data-fr="Atelier de mécanique et d’électricité automobile"
+                    data-ar="ورشة ميكانيك وكهرباء السيارات">
+                    Atelier de mécanique et d’électricité automobile
+                </h2>
+
+                <p data-fr="Les activités pratiques et théoriques se poursuivent au Centre Taboula dans le cadre du programme de la Deuxième Chance – Nouvelle Génération."
+                   data-ar="تتواصل الأنشطة التطبيقية والنظرية بمركز طابولة في إطار برنامج الفرصة الثانية – الجيل الجديد.">
+                    Les activités pratiques et théoriques se poursuivent
+                    au Centre Taboula dans le cadre du programme de la
+                    Deuxième Chance – Nouvelle Génération.
+                </p>
+
+                <button class="formation-more"
+                        onclick="openEducationDetails()"
+                        data-fr="Lire la suite"
+                        data-ar="اقرأ المزيد">
+                    Lire la suite
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- FENÊTRE DES DÉTAILS -->
+        <section id="education-details" class="dialogue-details">
+
+            <h2 data-fr="Atelier de mécanique et d’électricité automobile"
+                data-ar="ورشة ميكانيك وكهرباء السيارات">
+                Atelier de mécanique et d’électricité automobile
+            </h2>
+
+            <div class="formation-text">
+
+                <p data-fr="Les activités pratiques et théoriques se poursuivent au profit des bénéficiaires du programme de la Deuxième Chance – Nouvelle Génération au Centre Taboula, dans le cadre de l’atelier de mécanique et d’électricité automobile, encadré par l’Association Pont du Succès pour l’Éducation et le Développement Durable à Tétouan, en partenariat avec la Direction provinciale du ministère de l’Éducation nationale et la Direction provinciale de l’Entraide nationale."
+                   data-ar="تتواصل الأنشطة التطبيقية والنظرية لفائدة مستفيدات ومستفيدي برنامج الفرصة الثانية الجيل الجديد بمركز طابولة، في إطار ورشة الميكانيك وكهرباء السيارات التي تشرف عليها جمعية جسر النجاح للتربية والتنمية المستدامة بتطوان، بشراكة مع المديرية الإقليمية لوزارة التربية الوطنية والتعليم الأولي والتكوين المهني والتأهيل والمديرية الإقليمية للتعاون الوطني.">
+
+                    تتواصل الأنشطة التطبيقية والنظرية لفائدة مستفيدات ومستفيدي
+                    برنامج الفرصة الثانية الجيل الجديد بمركز طابولة، في إطار
+                    ورشة الميكانيك وكهرباء السيارات التي تشرف عليها جمعية جسر
+                    النجاح للتربية والتنمية المستدامة بتطوان، بشراكة مع
+                    المديرية الإقليمية لوزارة التربية الوطنية والتعليم الأولي
+                    والتكوين المهني والتأهيل والمديرية الإقليمية للتعاون الوطني.
+                </p>
+
+                <p data-fr="À travers des séances qui associent explications théoriques et applications directes sur les moteurs et les équipements, les jeunes découvrent les bases du fonctionnement, du diagnostic, de la maintenance et des règles de sécurité au travail. Ces activités visent à leur permettre d’acquérir des compétences professionnelles ouvrant de nouvelles perspectives d’insertion sociale et professionnelle."
+                   data-ar="من خلال حصص تجمع بين الشرح النظري والتطبيق الميداني المباشر على المحركات والمعدات، يتعرف الشباب والشابات على أساسيات الاشتغال والتشخيص والصيانة وقواعد السلامة المهنية، في بيئة تربوية تحفيزية تهدف إلى تمكينهم من مهارات حرفية تفتح أمامهم آفاق الاندماج المهني والاجتماعي.">
+
+                    من خلال حصص تجمع بين الشرح النظري والتطبيق الميداني المباشر
+                    على المحركات والمعدات، يتعرف الشباب والشابات على أساسيات
+                    الاشتغال والتشخيص والصيانة وقواعد السلامة المهنية، في بيئة
+                    تربوية تحفيزية تهدف إلى تمكينهم من مهارات حرفية تفتح أمامهم
+                    آفاق الاندماج المهني والاجتماعي.
+                </p>
+
+                <p data-fr="Tous nos encouragements aux bénéficiaires ainsi qu’aux équipes éducatives et de formation qui les accompagnent dans leur parcours."
+                   data-ar="كل التوفيق لمستفيدينا وللأطر التربوية والتكوينية المواكبة لمسارهم.">
+
+                    كل التوفيق لمستفيدينا وللأطر التربوية والتكوينية المواكبة لمسارهم.
+                </p>
+
+            </div>
+
+            <button class="formation-more"
+                    onclick="closeEducationDetails()"
+                    data-fr="Fermer"
+                    data-ar="إغلاق">
+                Fermer
+            </button>
+
+        </section>
+
+        <!-- RETOUR À L'ACCUEIL -->
+        <a href="index.html"
+           class="formation-home"
+           data-fr="Retour à l'accueil"
+           data-ar="العودة إلى الصفحة الرئيسية">
+            Retour à l'accueil
+        </a>
+
+    </main>
+
+    <!-- GALERIE PHOTOS AGRANDIE -->
+    <div id="education-lightbox" class="dialogue-gallery-modal">
+
+        <button class="dialogue-gallery-close"
+                onclick="closeEducationGallery()">
+            ×
+        </button>
+
+        <button class="dialogue-gallery-arrow prev"
+                onclick="changeEducationImage(-1)">
+            ❮
+        </button>
+
+        <img id="education-large-image"
+             src="images/education-mecanique-1.jpeg"
+             alt="Photo de l'activité">
+
+        <button class="dialogue-gallery-arrow next"
+                onclick="changeEducationImage(1)">
+            ❯
+        </button>
+
+        <div id="education-counter">1 / 7</div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* LANGUE */
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const language =
+                localStorage.getItem("siteLanguage") || "fr";
+
+            document.documentElement.lang = language;
+            document.documentElement.dir =
+                language === "ar" ? "rtl" : "ltr";
+
+            document.querySelectorAll("[data-fr][data-ar]")
+                .forEach(function(element) {
+
+                    const translatedText =
+                        element.getAttribute(
+                            language === "ar" ? "data-ar" : "data-fr"
+                        );
+
+                    if (translatedText !== null &&
+                        element.children.length === 0) {
+
+                        element.textContent = translatedText;
+                    }
+                });
+
+        });
+
+        /* FENÊTRE DES DÉTAILS */
+
+        function openEducationDetails() {
+            document.getElementById("education-details")
+                .classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeEducationDetails() {
+            document.getElementById("education-details")
+                .classList.remove("active");
+
+            document.body.style.overflow = "";
+        }
+
+        /* LES SEPT PHOTOS */
+
+        const educationImages = [
+            "images/education-mecanique-1.jpeg",
+            "images/education-mecanique-2.jpeg",
+            "images/education-mecanique-3.jpeg",
+            "images/education-mecanique-4.jpeg",
+            "images/education-mecanique-5.jpeg",
+            "images/education-mecanique-6.jpeg",
+            "images/education-mecanique-7.jpeg"
+        ];
+
+        let educationImageIndex = 0;
+
+        /* OUVRIR LA GALERIE */
+
+        function openEducationGallery(index) {
+
+            educationImageIndex = index;
+
+            updateEducationGallery();
+
+            document.getElementById("education-lightbox")
+                .classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        }
+
+        /* AFFICHER LA PHOTO */
+
+        function updateEducationGallery() {
+
+            document.getElementById("education-large-image").src =
+                educationImages[educationImageIndex];
+
+            document.getElementById("education-counter").textContent =
+                (educationImageIndex + 1) +
+                " / " + educationImages.length;
+        }
+
+        /* PHOTO SUIVANTE / PRÉCÉDENTE */
+
+        function changeEducationImage(direction) {
+
+            educationImageIndex =
+                (educationImageIndex + direction +
+                educationImages.length) % educationImages.length;
+
+            updateEducationGallery();
+        }
+
+        /* FERMER LA GALERIE */
+
+        function closeEducationGallery() {
+
+            document.getElementById("education-lightbox")
+                .classList.remove("active");
+
+            document.body.style.overflow = "";
+        }
+
+        /* CLAVIER */
+
+        document.addEventListener("keydown", function(event) {
+
+            const gallery =
+                document.getElementById("education-lightbox");
+
+            if (!gallery.classList.contains("active")) {
+
+                if (event.key === "Escape") {
+                    closeEducationDetails();
+                }
+
+                return;
+            }
+
+            if (event.key === "Escape") {
+                closeEducationGallery();
+            }
+
+            if (event.key === "ArrowRight") {
+                changeEducationImage(1);
+            }
+
+            if (event.key === "ArrowLeft") {
+                changeEducationImage(-1);
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
